@@ -28,11 +28,11 @@ jobs:
     - uses: nikeee/setup-pandoc@v1
 
     - run: node --version
-    - run: node scripts/publish.js
+    - run: node scripts/publish.js # writes build/index.html
 
     - uses: actions/upload-pages-artifact@v1
       with:
-        path: build/index.html
+        path: build/
 
   deploy:
     environment:
