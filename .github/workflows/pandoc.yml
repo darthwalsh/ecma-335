@@ -30,7 +30,7 @@ jobs:
     - run: node --version
     - run: node scripts/publish.js
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-pages-artifact@v1
       with:
         path: build/index.html
 
