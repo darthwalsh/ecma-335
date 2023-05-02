@@ -10,8 +10,9 @@ on:
   workflow_dispatch:
 
 # Need to ensure that Pages Source = GitHub Action, in https://github.com/$USER/ecma-335/settings/pages
-# TODO should restrict access to only the master branch:
+# By default https://github.com/$USER/ecma-335/settings/environments will restrict access to only publishing default branch
 # https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
