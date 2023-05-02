@@ -23,10 +23,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: nikeee/setup-pandoc@v1
-    
+
     - run: node --version
-    - run: echo "# Test" | pandoc -o index.html
+    - run: node scripts/publish.js
+
     - uses: actions/upload-artifact@v3
       with:
         name: html
-        path: index.html
+        path: build/index.html

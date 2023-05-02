@@ -53,15 +53,13 @@ files.sort(sorter);
 
 files.splice(0, 0, "TABLE_OF_CONTENTS.md", "FOREWORD.md")
 
-for (const f of files) {
-  console.log(f);
-}
+// for (const f of files) {
+//   console.log(f);
+// }
 
-// invoke pandoc --file-scope TABLE_OF_CONTENTS.md FOREWORD.md --standalone -o index.html`
-// MAYBE `pandoc --file-scope ${files} --standalone -o ${htmlPath}`
-// MAYBE use https://pandoc.org/MANUAL.html#option--defaults to pass the list of MD files?
-// const result = child_process.execSync("ls");
-// console.log(result.toString());
-
+// MAYBE use https://pandoc.org/MANUAL.html#option--defaults to pass the list of MD files, instead of passing 24k as CLI arg?
+// Use --file-scope so links between markdown files are rewritten to links within HTML
+const result = child_process.execSync(`pandoc --file-scope ${files.join(" ")} --standalone -o ${htmlPath}`);
+console.log(result.toString());
 
 // MAYBE use https://gist.github.com/killercup/5917178 for better HTML styling
