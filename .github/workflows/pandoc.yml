@@ -32,7 +32,6 @@ jobs:
 
     - uses: actions/upload-artifact@v3
       with:
-        name: html
         path: build/index.html
 
   deploy:
