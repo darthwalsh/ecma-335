@@ -70,5 +70,4 @@ const result = child_process.execSync(command);
 console.log(result.toString());
 
 
-// TODO copy styles.css to build/
 // TODO go through custom styles.css and spot check results
