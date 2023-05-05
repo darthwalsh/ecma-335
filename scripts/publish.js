@@ -7,6 +7,8 @@ fs.mkdirSync(buildPath, {recursive: true});
 const htmlPath = path.join(buildPath, "index.html");
 
 const docsPath = path.join(__dirname, "/../docs");
+
+// Run everything from the docs/ folder, so that relative links work
 process.chdir(docsPath);
 
 const files = fs.readdirSync(docsPath)
@@ -49,6 +51,10 @@ function sorter(a, b) {
 }
 files.sort(sorter);
 
+if (process.env.ECMA_TRIM) {
+  files.splice(10, 999); // Useful for debugging
+}
+
 const metadata = {
   lang: 'en-US',
   title: 'ECMA-335',
@@ -56,15 +62,13 @@ const metadata = {
 };
 const metaArgs = Object.entries(metadata).map(([k, v]) => `--metadata "${k}=${v}"`).join(" ");
 
-if (process.env.ECMA_TRIM) {
-  files.splice(10, 999); // Useful for debugging
-}
 
-// Could use https://pandoc.org/MANUAL.html#option--defaults to pass the list of MD files, instead of passing 24k text as CLI args?
 // Use --file-scope so links between markdown files are rewritten to links within HTML
-const result = child_process.execSync(
-  `pandoc ${metaArgs} --file-scope ${files.join(" ")} --standalone -o ${htmlPath}`
-);
+const command = `pandoc ${metaArgs} --css pandoc.css --file-scope ${files.join(" ")} --standalone -o ${htmlPath}`;
+// If passing 24k chars as CLI args is a problem, could use https://pandoc.org/MANUAL.html#option--defaults to pass the list of MD files?
+const result = child_process.execSync(command);
 console.log(result.toString());
 
-// MAYBE use https://gist.github.com/killercup/5917178 for better HTML styling
+
+// TODO copy styles.css to build/
+// TODO go through custom styles.css and spot check results
