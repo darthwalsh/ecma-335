@@ -51,7 +51,7 @@ function sorter(a, b) {
 }
 files.sort(sorter);
 
-files.splice(0, 0, "TABLE_OF_CONTENTS.md", "FOREWORD.md")
+files.splice(0, 0, "COPYRIGHT.md", "TABLE_OF_CONTENTS.md", "FOREWORD.md")
 
 // for (const f of files) {
 //   console.log(f);
