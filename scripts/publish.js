@@ -57,9 +57,21 @@ files.splice(0, 0, "TABLE_OF_CONTENTS.md", "FOREWORD.md")
 //   console.log(f);
 // }
 
+const metadata = {
+  lang: 'en-US',
+  title: 'ECMA-335',
+  subtitle: 'Common Language Infrastructure (CLI)',
+};
+const metaArgs = Object.entries(metadata).map(([k, v]) => `--metadata "${k}=${v}"`).join(" ");
+console.log(metaArgs);
+
+// files.splice(10, 999); //TODO
+
 // MAYBE use https://pandoc.org/MANUAL.html#option--defaults to pass the list of MD files, instead of passing 24k as CLI arg?
 // Use --file-scope so links between markdown files are rewritten to links within HTML
-const result = child_process.execSync(`pandoc --file-scope ${files.join(" ")} --standalone -o ${htmlPath}`);
+const result = child_process.execSync(
+  `pandoc ${metaArgs} --file-scope ${files.join(" ")} --standalone -o ${htmlPath}`
+);
 console.log(result.toString());
 
 // MAYBE use https://gist.github.com/killercup/5917178 for better HTML styling
