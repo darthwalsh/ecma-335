@@ -1,0 +1,23 @@
+<!-- This file is inserted into the HTML.
+  If the URL contains ?section=IV.2, then scroll to the section with id prefixed by iv.2
+-->
+<script>
+  window.onload = () => {
+    const sectionText = new URL(window.location).searchParams.get("section");
+    if (!sectionText) return;
+
+    const section = sectionText.toLowerCase();
+    if (!/^[iv.0-9]+$/.test(section)) {
+      alert("Section should only have chars: [iv.0-9]: " + section);
+      return;
+    }
+    
+    const el = document.querySelector(`[id^="${section.toLowerCase()}"]`);
+    if (!el) {
+      alert("Section wasn't found: " + section);
+      return;
+    }
+
+    el.scrollIntoView();
+  };
+</script>
