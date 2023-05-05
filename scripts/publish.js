@@ -52,7 +52,7 @@ function sorter(a, b) {
 files.sort(sorter);
 
 if (process.env.ECMA_TRIM) {
-  files.splice(10, 999); // Useful for debugging
+  files.splice(Number(process.env.ECMA_TRIM), 9999); // Useful for debugging
 }
 
 const metadata = {
@@ -60,14 +60,20 @@ const metadata = {
   title: 'ECMA-335',
   subtitle: 'Common Language Infrastructure (CLI)',
 };
-const metaArgs = Object.entries(metadata).map(([k, v]) => `--metadata "${k}=${v}"`).join(" ");
 
-
-// Use --file-scope so links between markdown files are rewritten to links within HTML
-const command = `pandoc ${metaArgs} --css pandoc.css --file-scope ${files.join(" ")} --standalone -o ${htmlPath}`;
+const command = [
+  "pandoc",
+  ...Object.entries(metadata).map(([k, v]) => `--metadata '${k}=${v}'`),
+  `'--include-in-header=${path.join(__dirname, "search.html")}'`,
+  "--css pandoc.css",
+  "--file-scope", // causes links between markdown files to be rewritten to links within HTML
+  ...files,
+  "--standalone", // generate a full HTML document
+  `-o '${htmlPath}'`,
+].join(" ");
 // If passing 24k chars as CLI args is a problem, could use https://pandoc.org/MANUAL.html#option--defaults to pass the list of MD files?
-const result = child_process.execSync(command);
-console.log(result.toString());
 
+child_process.execSync(command, {stdio: "inherit"});
 
 // TODO go through custom styles.css and spot check results
+// TODO the PNG files are missing
