@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 const buildPath = path.join(__dirname, "/../build");
+fs.rmSync(buildPath, {recursive: true, force: true});
 fs.mkdirSync(buildPath, {recursive: true});
 const htmlPath = path.join(buildPath, "index.html");
 
@@ -11,8 +12,18 @@ const docsPath = path.join(__dirname, "/../docs");
 // Run everything from the docs/ folder, so that relative links work
 process.chdir(docsPath);
 
-const files = fs.readdirSync(docsPath)
-    .filter(f => f.endsWith(".md"));
+const mdFiles = [];
+for (const f of fs.readdirSync(docsPath)) {
+  if (f.endsWith(".md")) {
+    mdFiles.push(f);
+  } else if (f.endsWith(".png")) {
+    fs.copyFileSync(path.join(docsPath, f), path.join(buildPath, f));
+  } else {
+    throw new Error(`Unexpected file docs/${f}`);
+  }
+};
+fs.copyFileSync(path.join(__dirname, "pandoc.css"), path.join(buildPath, "pandoc.css"));
+
 
 const roman = new Map([
   ["i", 1],
@@ -49,10 +60,10 @@ function sorter(a, b) {
   }
   return aParts.length - bParts.length;
 }
-files.sort(sorter);
+mdFiles.sort(sorter);
 
 if (process.env.ECMA_TRIM) {
-  files.splice(Number(process.env.ECMA_TRIM), 9999); // Useful for debugging
+  mdFiles.splice(Number(process.env.ECMA_TRIM), 9999); // Make the HTML smaller, helps debugging
 }
 
 const metadata = {
@@ -67,7 +78,7 @@ const command = [
   `'--include-in-header=${path.join(__dirname, "search.html")}'`,
   "--css pandoc.css",
   "--file-scope", // causes links between markdown files to be rewritten to links within HTML
-  ...files,
+  ...mdFiles,
   "--standalone", // generate a full HTML document
   `-o '${htmlPath}'`,
 ].join(" ");
@@ -76,4 +87,3 @@ const command = [
 child_process.execSync(command, {stdio: "inherit"});
 
 // TODO go through custom styles.css and spot check results
-// TODO the PNG files are missing
