@@ -72,12 +72,23 @@ const metadata = {
   subtitle: 'Common Language Infrastructure (CLI)',
 };
 
+/* Specify the source dialect as Github Flavored Markdown (GFM) https://github.github.com/gfm/
+Ensures semantics of markdown are parsed like the preview at github.com:
+- Fixes bare URLs so they are auto-linked
+- Fixes parsing of _ within words
+- Fixes allowing <p> in a table cell
+
+But disable the default extension gfm_auto_identifiers which mangles ids, removing the . from file names in the HTML ids
+*/
+const from_gfm = "--from gfm-gfm_auto_identifiers";
+
 const command = [
   "pandoc",
   ...Object.entries(metadata).map(([k, v]) => `--metadata '${k}=${v}'`),
   `'--include-in-header=${path.join(__dirname, "search.html")}'`,
   "--css pandoc.css",
   "--file-scope", // causes links between markdown files to be rewritten to links within HTML
+  from_gfm,
   ...mdFiles,
   "--standalone", // generate a full HTML document
   `-o '${htmlPath}'`,
