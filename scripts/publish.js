@@ -23,6 +23,7 @@ for (const f of fs.readdirSync(docsPath)) {
   }
 };
 fs.copyFileSync(path.join(__dirname, "pandoc.css"), path.join(buildPath, "pandoc.css"));
+fs.copyFileSync(path.join(__dirname, "favicon.png"), path.join(buildPath, "favicon.png"));
 
 
 const roman = new Map([
