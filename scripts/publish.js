@@ -85,14 +85,14 @@ const from_gfm = "--from gfm-gfm_auto_identifiers";
 
 const command = [
   "pandoc",
-  ...Object.entries(metadata).map(([k, v]) => `--metadata '${k}=${v}'`),
-  `'--include-in-header=${path.join(__dirname, "search.html")}'`,
+  ...Object.entries(metadata).map(([k, v]) => `--metadata "${k}=${v}"`),
+  `"--include-in-header=${path.join(__dirname, "search.html")}"`,
   "--css pandoc.css",
   "--file-scope", // causes links between markdown files to be rewritten to links within HTML
   from_gfm,
   ...mdFiles,
   "--standalone", // generate a full HTML document
-  `-o '${htmlPath}'`,
+  `-o "${htmlPath}"`,
 ].join(" ");
 // If passing 24k chars as CLI args is a problem, could use https://pandoc.org/MANUAL.html#option--defaults to pass the list of MD files?
 
