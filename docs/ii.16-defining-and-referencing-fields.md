@@ -10,7 +10,7 @@ A field is defined by the **.field** directive: (§[II.22.15](ii.22.15-field-0x0
 
  | _FieldDecl_ ::=
  | ----
- | [ `'['` _Int32_ `']'` ] _FieldAttr_* _Type_ _Id_ [ `'='` _FieldInit_ | `at` _DataLabel_ ]
+ | [ `'['` _Int32_ `']'` ] _FieldAttr_* _Type_ _Id_ [ `'='` _FieldInit_ \| `at` _DataLabel_ ]
 
 The _FieldDecl_ has the following parts:
 

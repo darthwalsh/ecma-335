@@ -35,7 +35,7 @@ Class `D` derives from `B<int32>`. And class `B<int32>` defines the method:
  public virtual void V(int32 t) { … }
  ```
 
-where we have simply substituted `B`'s generic parameter `T`, with the specific generic argument `int32`. This matches the method `D.V` (same name and signature). Thus, for the same reasons as in the nongeneric example above, it's clear that `D.V` overrides the inherited method `B.V`.
+where we have simply substituted `B`'s generic parameter `T`, with the specific generic argument `int32`. This matches the method `D.V` (same name and signature). Thus, for the same reasons as in the non-generic example above, it's clear that `D.V` overrides the inherited method `B.V`.
 
 Contrast this with class `E`, which derives from `B<string>`. In this case, substituting `B`'s `T` with string, we see that `B.V` has this signature:
 

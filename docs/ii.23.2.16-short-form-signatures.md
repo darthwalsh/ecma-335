@@ -26,3 +26,5 @@ Only the short form is valid. The following table shows which short-forms should
  | `VALUETYPE` | `System.IntPtr` | `I`
  | `VALUETYPE` | `System.UIntPtr` | `U`
  | `VALUETYPE` | `System.TypedReference` | `TYPEDBYREF`
+
+_[Note:_ arrays shall be encoded in signatures using one of `ELEMENT_TYPE_ARRAY` or `ELEMENT_TYPE_SZARRAY`. There is no long form involving a *TypeRef* to `System.Array` _end note]_

@@ -15,7 +15,7 @@ For binding purposes (e.g., for locating a method definition from the method ref
 _[Example:_ Declare an enum type and then create a local variable of that type. Store a constant of the underlying type into the enum (showing automatic coersion from the underlying type to the enum type). Load the enum back and print it as the underlying type (showing automatic coersion back). Finally, load the address of the enum and extract the contents of the instance field and print that out as well.
 
  ```ilasm
- assembly Test { }
+ .assembly Test { }
  .assembly extern mscorlib { }
 
  .class sealed public ErrorCodes extends [mscorlib]System.Enum

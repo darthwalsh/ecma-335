@@ -50,7 +50,7 @@ The rows of the _MethodSemantics_ table are filled by **.property** (§[II.17](i
 
  17. If the property is indexed, the indexes for getter and setter shall agree in number and type \[CLS\]
 
- 18. Any *AddOn* method for an event whose _Name_ is `xxx` shall have the signature: `void add_xxx (`\<DelegateType\>`handler)` (§[I.10.4](i.10.4-naming-patterns.md)) \[CLS\]
+ 18. Any *AddOn* method for an event whose _Name_ is `xxx` shall have the signature: `void add_xxx (`\<DelegateType\> `handler)` (§[I.10.4](i.10.4-naming-patterns.md)) \[CLS\]
 
  19. Any *RemoveOn* method for an event whose _Name_ is `xxx` shall have the signature: `void remove_xxx(`\<DelegateType\>` handler)` (§[I.10.4](i.10.4-naming-patterns.md)) \[CLS\]
 

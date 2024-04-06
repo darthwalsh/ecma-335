@@ -19,7 +19,7 @@ _[Note:_ The following examples show the most commonly encountered cases.
  (+infinity) - (+infinity) = NaN
  ```
 
-This standard does not specify the behavior of arithmetic operations on denormalized floatingpoint numbers, nor does it specify when or whether such representations should be created. This is in keeping with IEC 60559:1989. In addition, this standard does not specify how to access the exact bit pattern of NaNs that are created, nor the behavior when converting a **NaN** between 32-bit and 64-bit representation. All of this behavior is deliberately left implementation-specific. _end note]_
+This standard does not specify the behavior of arithmetic operations on denormalized floating-point numbers, nor does it specify when or whether such representations should be created. This is in keeping with IEC 60559:1989. In addition, this standard does not specify how to access the exact bit pattern of NaNs that are created, nor the behavior when converting a **NaN** between 32-bit and 64-bit representation. All of this behavior is deliberately left implementation-specific. _end note]_
 
 For purposes of comparison, infinite values act like a number of the correct sign, but with a very large magnitude when compared with finite values. For comparison purposes, **NaN** is 'unordered' (see `clt`, `clt.un`).
 

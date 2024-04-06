@@ -12,7 +12,7 @@ A CLS extender is a language or tool that is designed to allow programmers to bo
 
  * Place any CLS-compliant custom attribute on all appropriate elements of metadata.
 
- * Define new CLS-compliant (non-generic) types that extend any (non-sealed) CLScompliant base type. Valid base types include normal (non-generic) types and also fully constructed generic types.
+ * Define new CLS-compliant (non-generic) types that extend any (non-sealed) CLS-compliant base type. Valid base types include normal (non-generic) types and also fully constructed generic types.
 
 _[Note:_ Extenders should consider supporting:
 

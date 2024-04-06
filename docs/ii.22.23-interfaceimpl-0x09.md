@@ -8,7 +8,7 @@ The _InterfaceImpl_ table has the following columns:
  
  The _InterfaceImpl_ table records the interfaces a type implements explicitly.  Conceptually, each row in the _InterfaceImpl_ table indicates that _Class_ implements _Interface_.
 
- > _ This contains informative text only._
+ > _This contains informative text only._
 
  1. The _InterfaceImpl_ table can contain zero or more rows
 

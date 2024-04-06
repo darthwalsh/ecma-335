@@ -4,7 +4,7 @@ A generic method definition is one that includes a generic parameter list.  A ge
 
 Generic methods can be static, instance, or virtual. Class or instance constructors (`.cctor`, or `.ctor`, respectively) shall not be generic.
 
-The method generic parameters are in scope in the signature and body of the method, and in the generic parameter constraints. _[Note: The signature includes the method return type. So, in the example:
+The method generic parameters are in scope in the signature and body of the method, and in the generic parameter constraints. _[Note:_ The signature includes the method return type. So, in the example:
 
  ```ilasm
  .method … !!0 M`1<T>() { … }

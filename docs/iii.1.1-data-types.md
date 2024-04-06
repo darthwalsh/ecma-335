@@ -10,4 +10,4 @@ While the CTS defines a rich type system and the CLS specifies a subset that can
 
 Note that object references and pointer types can be assigned the value `null`. This is defined throughout the CLI to be zero (a bit pattern of all-bits-zero).
 
-_[Note:_ As far as VES operations on the evaluation stack are concerned, there is only one floatingpoint type, and the VES does not care about its size. The VES makes the distinction about the size of numerical values only when storing these values to, or reading from, the heap, statics, local variables, or method arguments. _end note]_
+_[Note:_ As far as VES operations on the evaluation stack are concerned, there is only one floating-point type, and the VES does not care about its size. The VES makes the distinction about the size of numerical values only when storing these values to, or reading from, the heap, statics, local variables, or method arguments. _end note]_

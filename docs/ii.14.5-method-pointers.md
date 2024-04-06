@@ -1,8 +1,7 @@
 ## II.14.5 Method pointers
 
- | _Type_ ::=
+ | _Type_ ::= &hellip;
  | ----
- | &hellip;
  | \| `method` _CallConv_ _Type_ `'*'` `'('` _Parameters_ `')'`
 
 Variables of type method pointer shall store the address of the entry point to a method whose signature is *method-signature-compatible-with* (§[I.8.7.1](i.8.7.1-assignment-compatibility-for-signature-types.md)) the type of the method pointer. A pointer to a static or instance method is obtained with the `ldftn` instruction, while a pointer to a virtual method is obtained with the `ldvirtftn` instruction. A method can be called by using a method pointer with the `calli` instruction.  See [Partition III](#todo-missing-hyperlink) for the specification of these instructions.

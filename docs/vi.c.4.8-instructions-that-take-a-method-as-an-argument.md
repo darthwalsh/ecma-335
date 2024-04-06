@@ -4,7 +4,7 @@ These instructions reference a method, either in another class (first instructio
 
  | _\<instr\>_ ::=
  | ----
- | _\<instr_method\>_ _\<callConv\>_ _\<type\>_ [ _\<typeSpec\>_ `::` ] _\<methodName\>_ `(` <parameters> `)`
+ | _\<instr_method\>_ _\<callConv\>_ _\<type\>_ [ _\<typeSpec\>_ `::` ] _\<methodName\>_ `(` \<parameters\> `)`
 
  | _\<instr_method\>_ ::= | Derived from [`opcode.def`](vi.c.2-cil-opcode-descriptions.md#opcode-def)
  | ---- | ----

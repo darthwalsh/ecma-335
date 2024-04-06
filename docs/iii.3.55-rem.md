@@ -1,6 +1,7 @@
 ## III.3.55 rem &ndash; compute remainder
 
  | Format | Assembly Format | Description
+ | ---- | ---- | ----
  | 5D | `rem` | Remainder when dividing one value by another.
 
 #### Stack Transition:

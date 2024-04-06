@@ -8,7 +8,7 @@ The following table lists the options for a field initializer. Note that while b
 
  | _FieldInit_ ::= | Description
  | ---- | ----
- | `bool` `'('` `true` | `false` `')'` | Boolean value, encoded as true or false
+ | `bool` `'('` `true` \| `false` `')'` | Boolean value, encoded as true or false
  | \| `bytearray` `'('` _Bytes_ `')'` | String of bytes, stored without conversion. Can be padded with one zero byte to make the total byte-count an even number
  | \| `char` `'('` _Int32_ `')'` | 16-bit unsigned integer (Unicode character)
  | \| `float32` `'('` _Float64_ `')'` | 32-bit floating-point number, with the floating-point number specified in parentheses.

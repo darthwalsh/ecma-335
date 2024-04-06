@@ -2,7 +2,7 @@
 
 These instructions take one operand, which must be a floating point number.
 
- | _\<instr\>_ ::= |
+ | _\<instr\>_ ::= | |
  | ---- | ----
  | _\<instr_r\>_ _\<float64\>_
  | \| _\<instr_r\>_ _\<int64\>_

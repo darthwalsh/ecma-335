@@ -8,7 +8,8 @@ User-defined types are referenced either using their full name and a resolution 
 
  | _ResolutionScope_ ::=
  | ----
- | `'['` `.module` _Filename_ `']'` | `'['` _AssemblyRefName_ `']'`
+ | `'['` `.module` _Filename_ `']'`
+ | \| `'['` _AssemblyRefName_ `']'`
  
  | _AssemblyRefName_ ::= | Clause
  | ---- | ----

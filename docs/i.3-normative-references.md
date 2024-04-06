@@ -22,7 +22,7 @@ ISO/IEC 11578:1996, _Information Technology &mdash; Open Systems Interconnection
 
 ISO/IEC 14882:2011, _Programming languages &mdash; C++._
 
-ISO/IEC 23270:2006, _Programming languages &mdash; C#.
+ISO/IEC 23270:2006, _Programming languages &mdash; C#._
 
 RFC-768, _User Datagram Protocol._ J. Postel. 1980, August.
 
@@ -52,7 +52,7 @@ RFC-1764. _The PPP XNS IDP Control Protocol (XNSCP)._ Network Working Group. S. 
 
 RFC-1766, _Tags for the Identification of Languages._ Network Working Group. H. Alvestrand. 1995, March.
 
-RFC-1792. _TCP/IPX Connection Mib Specification._Network Working Group. T. Sung. 1995, April. 
+RFC-1792. _TCP/IPX Connection Mib Specification._ Network Working Group. T. Sung. 1995, April.
 
 RFC-2236. _Internet Group Management Protocol, Version 2._ Network Working Group. W. Fenner. 1997, November.
 

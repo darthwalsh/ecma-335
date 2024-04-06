@@ -3,7 +3,7 @@
  Format | Assembly Format | Description
  ---- | ---- | ----
  3C _\<int32\>_ | `bge` _target_ | Branch to target if greater than or equal to.
- 2F _\<int8\_> | `bge.s` _target_ | Branch to target if greater than or equal to, short form.
+ 2F _\<int8\>_ | `bge.s` _target_ | Branch to target if greater than or equal to, short form.
 
 #### Stack Transition:
 

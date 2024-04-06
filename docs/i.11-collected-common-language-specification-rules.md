@@ -40,15 +40,15 @@ The complete set of CLS rules are collected here for reference. Recall that thes
 
 **CLS Rule 19:** CLS-compliant interfaces shall not define static methods, nor shall they define fields. (§[I.8.9.4](i.8.9.4-interface-type-definition.md))
 
-**CLS Rule 20:** CLS-compliant classes, value types, and interfaces shall not require the implementation of non-CLS-compliant members. (§[I.8.9.6.4]](#todo-missing-hyperlink))
+**CLS Rule 20:** CLS-compliant classes, value types, and interfaces shall not require the implementation of non-CLS-compliant members. (§[I.8.9.6.4](i.8.9.6.4-supporting-interface-contracts.md))
 
-**CLS Rule 21:** An object constructor shall call some instance constructor of its base class before any access occurs to inherited instance data. (This does not apply to value types, which need not have constructors.) (§[I.8.9.6.6]](#todo-missing-hyperlink))
+**CLS Rule 21:** An object constructor shall call some instance constructor of its base class before any access occurs to inherited instance data. (This does not apply to value types, which need not have constructors.) (§[I.8.9.6.6](i.8.9.6.6-constructors.md))
 
-**CLS Rule 22:** An object constructor shall not be called except as part of the creation of an object, and an object shall not be initialized twice. (§[I.8.9.6.6]](#todo-missing-hyperlink))
+**CLS Rule 22:** An object constructor shall not be called except as part of the creation of an object, and an object shall not be initialized twice. (§[I.8.9.6.6](i.8.9.6.6-constructors.md))
 
-**CLS Rule 23:** `System.Object` is CLS-compliant. Any other CLS-compliant class shall inherit from a CLS-compliant class. (§[I.8.9.9]](#todo-missing-hyperlink))
+**CLS Rule 23:** `System.Object` is CLS-compliant. Any other CLS-compliant class shall inherit from a CLS-compliant class. (§[I.8.9.9](i.8.9.9-object-type-inheritance.md))
 
-**CLS Rule 24:** The methods that implement the getter and setter methods of a property shall be marked SpecialName in the metadata. (§[I.8.11.3]](#todo-missing-hyperlink))
+**CLS Rule 24:** The methods that implement the getter and setter methods of a property shall be marked SpecialName in the metadata. (§[I.8.11.3](i.8.11.3-property-definitions.md))
 
 **CLS Rule 25:** No longer used. _[Note:_ In an earlier version of this standard, this rule stated "The accessibility of a property and of its accessors shall be identical." The removal of this rule allows, for example, public access to a getter while restricting access to the setter. _end note]_ (§[I.8.11.3](i.8.11.3-property-definitions.md))
 

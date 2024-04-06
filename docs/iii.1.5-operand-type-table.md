@@ -13,7 +13,7 @@ Many CIL operations take numeric operands on the stack. These operations fall in
  **`int64`** | &cross; | `int64` | &cross; | &cross; | &cross; | &cross;
  **`native int`** | `native int` | &cross; | `native int` | &cross; | `&` (`add`) <sup>nv</sup></ins> | &cross;
  **`F`** | &cross; | &cross; | &cross; | `F` | &cross; | &cross;
- **`&`** | `&` (`add`, `sub`) <sup>nv</sup></ins> | &cross; | `&` (`add`, `sub`) <sup>nv</sup></ins> | &cross; `native int` (`sub`) <sup>nv</sup></ins> | &cross;
+ **`&`** | `&` (`add`, `sub`) <sup>nv</sup></ins> | &cross; | `&` (`add`, `sub`) <sup>nv</sup></ins> | &cross; | `native int` (`sub`) <sup>nv</sup></ins> | &cross;
  **`O`** | &cross; | &cross; | &cross; | &cross; | &cross; | &cross;
 
 [Table III.3](#todo-missing-hyperlink) shows the result type for the unary numeric operations. Used for the `neg` instruction. Boxes marked &cross; indicate an invalid CIL instruction. All valid uses of this instruction are verifiable.

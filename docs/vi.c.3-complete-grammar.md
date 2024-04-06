@@ -10,7 +10,7 @@ This grammar provides a number of ease-of-use features not provided in the gramm
  * _INT32_ &ndash; C style 32-bit integer (e.g., `235`, `03423`, `0x34FFF`)
  * _INT64_ &ndash; C style 64-bit integer (e.g., `-2353453636235234`, `0x34FFFFFFFFFF`)
  * _FLOAT64_ &ndash; C style floating point number (e.g., `-0.2323`, `354.3423`, `3435.34E-5`)
- * _INSTR_*_ &ndash; IL instructions of a particular class (see `opcode.def`).
+ * _INSTR\_*_ &ndash; IL instructions of a particular class (see `opcode.def`).
 
  ```c
  START                   : decls
@@ -492,8 +492,7 @@ repeatOpt                : /* EMPTY */
                          | INSTR_SIG callConv type '(' sigArgs0 ')'
                          | INSTR_RVA id
                          | INSTR_RVA int32
-                         | instr_tok_head ownerType /* ownerType ::= memberRef
-                          typeSpec */
+                         | instr_tok_head ownerType /* ownerType ::= memberRef | typeSpec */
                          | INSTR_SWITCH '(' labels ')'
                          | INSTR_PHI int16s
                          ;

@@ -96,7 +96,7 @@ _[Note:_ If _Signature_ is `GENERIC` (0x10), the generic arguments are described
 
  21. There shall be no duplicate rows in the _MethodDef_ table, based upon owner + _Name_ + _Signature_ (where owner is the owning row in the _TypeDef_ table). (Note that the _Signature_ encodes whether or not the method is generic, and for generic methods, it encodes the number of generic parameters.)  (Note, however, that if _Flags_.`CompilerControlled` = 1, then this row is excluded from duplicate checking) \[ERROR\]
 
- 22. There shall be no duplicate rows in the _MethodDef_ table, based upon owner + _Name_ + _Signature_, where _Name_ fields are compared using CLS conflicting-identifierrules; also, the Type defined in the signatures shall be different. So, for example, `int i` and `float i` would be considered CLS duplicates; also, the return type of the method is ignored (Note, however, that if _Flags_.`CompilerControlled` = 1, this row is excluded from duplicate checking as explained above.) \[CLS\]
+ 22. There shall be no duplicate rows in the _MethodDef_ table, based upon owner + _Name_ + _Signature_, where _Name_ fields are compared using CLS conflicting-identifier-rules; also, the Type defined in the signatures shall be different. So, for example, `int i` and `float i` would be considered CLS duplicates; also, the return type of the method is ignored (Note, however, that if _Flags_.`CompilerControlled` = 1, this row is excluded from duplicate checking as explained above.) \[CLS\]
 
  23. If `Final`, `NewSlot`, or `Strict` are set in _Flags_, then _Flags_.`Virtual` shall also be set \[ERROR\]
 
@@ -166,7 +166,7 @@ _[Note:_ If _Signature_ is `GENERIC` (0x10), the generic arguments are described
 
      3. _Flags_.`Abstract` shall be 0  \[ERROR\]
 
-     4. _Flags_.`Virtual` shall be \[ERROR\]
+     4. _Flags_.`Virtual` shall be 0  \[ERROR\]
 
      5. 'Owner' type shall be a valid Class or ValueType (not `<Module>` and not an Interface) in the _TypeDef_ table \[ERROR\]
 

@@ -22,7 +22,7 @@ The following table lists the values for `ELEMENT_TYPE` constants. These are use
  `ELEMENT_TYPE_PTR` | 0x0f | Followed by *type*
  `ELEMENT_TYPE_BYREF` | 0x10 | Followed by *type*
  `ELEMENT_TYPE_VALUETYPE` | 0x11 | Followed by _TypeDef_ or _TypeRef_ token
- `ELEMENT_TYPE_CLASS` | 0x12 | Followed by_ TypeDef_ or _TypeRef_ token
+ `ELEMENT_TYPE_CLASS` | 0x12 | Followed by _TypeDef_ or _TypeRef_ token
  `ELEMENT_TYPE_VAR` | 0x13 | Generic parameter in a generic type definition, represented as _number_ (compressed unsigned integer)
  `ELEMENT_TYPE_ARRAY` | 0x14 | *type* *rank* *boundsCount* *bound1* &hellip; *loCount* *lo1* &hellip;
  `ELEMENT_TYPE_GENERICINST` | 0x15 | Generic type instantiation. Followed by *type* *type-arg-count* *type-1* &hellip; *type-n*

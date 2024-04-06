@@ -4,7 +4,7 @@ The following aspects of program behavior are implementation dependent. Many of 
 
  * Size of heap and stack aren't required to have minimum sizes
 
-Behavior relative to asynchronous exceptions (see `System.Thread.Abort`)
+ * Behavior relative to asynchronous exceptions (see `System.Thread.Abort`)
 
  * Globalization is not supported, so every implementation specifies its culture information including such user-visible features as sort order for strings.
 

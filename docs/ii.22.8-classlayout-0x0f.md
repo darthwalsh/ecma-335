@@ -4,7 +4,7 @@ The _ClassLayout_ table is used to define how the fields of a class or value typ
 
 _[Rationale:_ This feature is used to lay out a managed value type in exactly the same way as an unmanaged C struct, allowing a managed value type to be handed to unmanaged code, which then accesses the fields exactly as if that block of memory had been laid out by unmanaged code. _end rationale]_
 
-The information held in the _ClassLayout_ table depends upon the _Flags_ value for {`AutoLayout`,`SequentialLayout`, `ExplicitLayout`} in the owner class or value type. A type has layout if it is marked `SequentialLayout` or `ExplicitLayout`. If any type within an inheritance chain has layout, then so shall all its base classes, up to the one that descends immediately from `System.ValueType` (if it exists in the type's hierarchy); otherwise, from `System.Object`.
+The information held in the _ClassLayout_ table depends upon the _Flags_ value for {`AutoLayout`, `SequentialLayout`, `ExplicitLayout`} in the owner class or value type. A type has layout if it is marked `SequentialLayout` or `ExplicitLayout`. If any type within an inheritance chain has layout, then so shall all its base classes, up to the one that descends immediately from `System.ValueType` (if it exists in the type's hierarchy); otherwise, from `System.Object`.
 
 > _This contains informative text only._
 

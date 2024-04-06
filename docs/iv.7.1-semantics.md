@@ -380,7 +380,7 @@ There are three types of elements/attributes:
 > <!ELEMENT altmember EMPTY>
 > ```
 > 
-> element is used for operator overloads.
+> &emsp;&emsp;(Informative) Specifies that an alternative, equivalent member call exists for the current method. This element is used for operator overloads.
 > 
 > ```xml
 > <!ATTLIST altmember

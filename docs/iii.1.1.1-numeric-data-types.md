@@ -22,7 +22,7 @@
 
       1. Assignment to a local (`stloc`) or argument (`starg`) whose type is declared to be a short integer type automatically truncates to the size specified for the local or argument.
 
-      2. Loading from a local (`ldloc`) or argument (`ldarg`) whose type is declared to be a short signed integer type automatically sign extends
+      2. Loading from a local (`ldloc`) or argument (`ldarg`) whose type is declared to be a short signed integer type automatically sign extends.
 
       3. Calling a procedure with an argument that is a short integer type is equivalent to assignment to the argument value, so it truncates.
 

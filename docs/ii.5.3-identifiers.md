@@ -13,7 +13,7 @@ A keyword shall only be used as an identifier if that keyword appears in single 
  |:----
  | _Id_ [ `'.'` _Id_ ]*
  
-_[Rationale:_ _DottedName_ is provided for convenience, since "`.`" can be included in an _Id_ using the _SQSTRING_ syntax. _DottedName_ is used in the grammar where `'.'` is considered a common character (e.g., in fully qualified type names) _end rationale]_
+_[Rationale:_ _DottedName_ is provided for convenience, since "`.`" can be included in an _Id_ using the _SQSTRING_ syntax. _DottedName_ is used in the grammar where "`.`" is considered a common character (e.g., in fully qualified type names) _end rationale]_
 
 _[Example:_ The following are simple identifiers:
 

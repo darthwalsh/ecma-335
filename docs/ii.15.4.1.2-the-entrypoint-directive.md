@@ -1,6 +1,7 @@
 ## II.15.4.1.2 The .entrypoint directive
 
  | _MethodBodyItem_ ::= &hellip;
+ | ----
  | \| `.entrypoint`
 
 The **.entrypoint** directive marks the current method, which shall be static, as the entry point to an application. The VES shall call this method to start the application. An executable shall have exactly one entry point method; entry point methods in a library are not handled specially by the VES. This entry point method can be a global method or it can appear inside a type. (The effect of the directive is to place the metadata token for this method into the CLI header of the PE file)

@@ -2,7 +2,7 @@
 
  | Format | Assembly Format | Description
  | ---- | ---- | ----
- | FE 11 | `endfilter | End an exception handling filter clause.
+ | FE 11 | `endfilter` | End an exception handling filter clause.
 
 #### Stack Transition:
 

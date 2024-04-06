@@ -36,7 +36,7 @@ The assembler does not optimize branches. The branch must be specified explicitl
  | \| `brtrue`
  | \| `brtrue.s`
  | \| `leave`
- | \| `leave.`
+ | \| `leave.s`
 
 #### Example:
 

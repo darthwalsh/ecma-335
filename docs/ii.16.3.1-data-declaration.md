@@ -10,7 +10,8 @@ The body consists either of one data item or a list of data items in braces. A l
 
  | _DdBody_ ::=
  | ----
- | _DdItem_ | `'{'` _DdItemList_ `'}'`
+ | _DdItem_
+ | \| `'{'` _DdItemList_ `'}'`
 
 A list of items consists of any number of items:
 
@@ -24,7 +25,7 @@ A data item declares the type of the data and provides the data in parentheses. 
 
  | _DdItem_ ::= | Description
  | ---- | ----
- | `'&'` `'(` _Id_ `')'` | Address of label
+ | `'&'` `'('` _Id_ `')'` | Address of label
  | \| `bytearray` `'('` _Bytes_ `')'` | Array of bytes
  | \| `char` `'*'` `'('` _QSTRING_ `')'` | Array of (Unicode) characters
  | \| `float32` [ `'('` _Float64_ `')'` ] [ `'['` _Int32_ `']'` ] | 32-bit floating-point number, can be replicated

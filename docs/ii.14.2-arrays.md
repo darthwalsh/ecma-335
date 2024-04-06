@@ -2,9 +2,8 @@
 
 While vectors (§[II.14.1](ii.14.1-vectors.md)) have direct support through CIL instructions, all other arrays are supported by the VES by creating subtypes of the abstract class `System.Array` (see [Partition IV](#todo-missing-hyperlink))
 
- | _Type_ ::=
+ | _Type_ ::= &hellip;
  | ----
- | &hellip;
  | \| _Type_ `'['` [ _Bound_ [ `','` _Bound_ ]*] `']'`
 
 The *rank* of an array is the number of dimensions. The CLI does not support arrays with rank 0. The type of an array (other than a vector) shall be determined by the type of its elements and the number of dimensions.

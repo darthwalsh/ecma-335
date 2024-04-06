@@ -14,4 +14,4 @@ The different types that the object type implements (i.e., the object type and a
 >
 > **CLS (extender):** Need not provide syntax to author classes, value types, or interfaces that violate this rule.
 >
-> **CLS (framework):** Shall not externally expose classes, value types, or interfaces that violate this rule. If a CLS-compliant framework exposes a class implementing a non-CLS-compliant interface, the framework shall provide concrete implementations of all non-CLS-compliant members. This ensures that CLS extenders do not need syntax for implementing non-CLScompliant members. _end note]_
+> **CLS (framework):** Shall not externally expose classes, value types, or interfaces that violate this rule. If a CLS-compliant framework exposes a class implementing a non-CLS-compliant interface, the framework shall provide concrete implementations of all non-CLS-compliant members. This ensures that CLS extenders do not need syntax for implementing non-CLS-compliant members. _end note]_

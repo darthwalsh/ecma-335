@@ -2,7 +2,7 @@
 
  | Format | Assembly Format | Description
  | ---- | ---- | ----
- | 71 _\<\T\>_ | `ldobj` _typeTok_ | Copy the value stored at_address _src_ to the stack.
+ | 71 _\<\T\>_ | `ldobj` _typeTok_ | Copy the value stored at address _src_ to the stack.
 
 #### Stack Transition:
 

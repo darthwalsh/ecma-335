@@ -36,7 +36,7 @@ Each row in the _Field_ table results from a top-level **.field** directive (§[
 
  9. If _Flags_.`HasFieldMarshal` = 1, then this row shall 'own' exactly one row in the _FieldMarshal_ table (§[II.23.1.5](ii.23.1.5-flags-for-fields-fieldattributes.md)) \[ERROR\]
 
- 10. If _Flags_.`HasDefault` = 1, then this row shall 'own' exactly one row in the _Constant_ table (§[II.23.1.5](ii.23.1.5-flags-for-fields-fieldattributes.md) \[ERROR\]
+ 10. If _Flags_.`HasDefault` = 1, then this row shall 'own' exactly one row in the _Constant_ table (§[II.23.1.5](ii.23.1.5-flags-for-fields-fieldattributes.md)) \[ERROR\]
 
  11. If _Flags_.`HasFieldRVA` = 1, then this row shall 'own' exactly one row in the _Field's RVA_ table (§[II.23.1.5](ii.23.1.5-flags-for-fields-fieldattributes.md)) \[ERROR\]
 

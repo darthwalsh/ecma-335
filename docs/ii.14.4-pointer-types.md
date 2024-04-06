@@ -1,8 +1,7 @@
 ## II.14.4 Pointer types
 
- | _Type_ ::= | Clause
+ | _Type_ ::= &hellip; | Clause
  | ---- | ----
- | &hellip; |
  | \| _Type_ `'&'` | [II.14.4.2](ii.14.4.2-managed-pointers.md)
  | \| _Type_ `'*'` | [II.14.4.1](ii.14.4.1-unmanaged-pointers.md)
 

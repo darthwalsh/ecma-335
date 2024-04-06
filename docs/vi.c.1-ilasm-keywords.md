@@ -1,8 +1,8 @@
 ## VI.C.1 ILAsm keywords
 
-This subclause provides a complete list of the keywords used by _ilasm_. If users wish to use any of these as simple identifiers within programs they just make use of the appropriate escape notation (single or double quotation marks as specified in the grammar). This assembler is casesensitive.
+This subclause provides a complete list of the keywords used by _ilasm_. If users wish to use any of these as simple identifiers within programs they just make use of the appropriate escape notation (single or double quotation marks as specified in the grammar). This assembler is case-sensitive.
 
-|
+| <!-- empty comment to ensure markdown table is parsed -->
 | ----
 | `#line`
 | `.addon`
