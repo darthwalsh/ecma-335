@@ -4,4 +4,4 @@
 
 Information on this topic can be found at the following location:
 
-http://msdn.microsoft.com/library/default.asp?url=/library/enus/cpgenref/html/cpconnetframeworkdesignguidelines.asp
+http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpgenref/html/cpconnetframeworkdesignguidelines.asp
