@@ -6,7 +6,7 @@
 
 #### Stack Transition:
 
-&hellip;, _value_  &hellip;, _value_
+&hellip;, _value_ &rarr; &hellip;, _value_
 
 #### Description:
 
