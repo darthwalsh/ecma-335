@@ -10,6 +10,6 @@ There are two kinds of types: **value types** and **reference types**.
 
      * An interface type is always a partial description of a value, potentially supported by many object types.
 
-     * A pointer type is a compile-time description of a value whose representation is a machine address of a location. Pointers are divided into managed (§[I.8.2.1.1](i.8.2.1.1-managed-pointers-and-related-types.md), §[I.12.1.1.2](i.12.1.1.2-object-reference-and-managed-pointer-types-o-and-ref.md)) and unmanaged (§I.8.9.2).
+     * A pointer type is a compile-time description of a value whose representation is a machine address of a location. Pointers are divided into managed (§[I.8.2.1.1](i.8.2.1.1-managed-pointers-and-related-types.md), §[I.12.1.1.2](i.12.1.1.2-object-reference-and-managed-pointer-types-o-and-ref.md)) and unmanaged (§[I.8.9.2](i.8.9.2-unmanaged-pointer-types.md)).
 
      * Built-in reference types.

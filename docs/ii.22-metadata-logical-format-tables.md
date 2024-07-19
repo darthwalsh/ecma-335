@@ -22,7 +22,7 @@ Metadata preserves name strings, as created by a compiler or code generator, unc
 
 Matching *AssemblyRef*s and *ModuleRef*s to their corresponding *Assembly* and *Module* shall be performed case-blind (see [Partition I](#todo-missing-hyperlink)). However, all other name matches (type, field, method, property, event) shall be exact&mdash;so that this level of resolution is the same across all platforms, whether their OS is case-sensitive or not.
 
-Tables are given both a name (e.g., "Assembly") and a number (e.g., 0x20).  The number for each table is listed immediately with its title in the following subclauses. The table numbers indicate the order in which their corresponding table shall appear in the PE file, and there is a set of bits (§II.24.2.6) saying whether a given table exists or not. The number of a table is the position within that set of bits.
+Tables are given both a name (e.g., "Assembly") and a number (e.g., 0x20).  The number for each table is listed immediately with its title in the following subclauses. The table numbers indicate the order in which their corresponding table shall appear in the PE file, and there is a set of bits (§[II.24.2.6](ii.24.2.6-metadata-stream.md)) saying whether a given table exists or not. The number of a table is the position within that set of bits.
 
 A few of the tables represent extensions to regular CLI files. Specifically, *ENCLog* and *ENCMap*, which occur in temporary images, generated during "Edit and Continue" or "incremental compilation" scenarios, whilst debugging.  Both table types are reserved for future use.
 

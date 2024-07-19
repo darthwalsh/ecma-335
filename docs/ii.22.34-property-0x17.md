@@ -12,7 +12,7 @@ _[Note:_ The CLS (see Partition I) refers to instance, virtual, and static prope
 
 The _Property_ (0x17) table has the following columns:
 
- * _Flags_ (a 2-byte bitmask of type _PropertyAttributes_, §II.23.1.14)
+ * _Flags_ (a 2-byte bitmask of type _PropertyAttributes_, §[II.23.1.14](ii.23.1.14-flags-for-properties-propertyattributes.md))
 
  * _Name_ (an index into the String heap)
  

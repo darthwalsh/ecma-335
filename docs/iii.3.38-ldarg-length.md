@@ -21,7 +21,7 @@ The `ldarg.0`, `ldarg.1`, `ldarg.2`, and `ldarg.3` instructions are efficient en
 
 For procedures that take a variable-length argument list, the `ldarg` instructions can be used only for the initial fixed arguments, not those in the variable part of the signature. (See the `arglist` instruction.)
 
-If required, arguments are converted to the representation of their intermediate type (§I.8.7) when loaded onto the stack (§[III.1.1.1](iii.1.1.1-numeric-data-types.md)).
+If required, arguments are converted to the representation of their intermediate type (§[I.8.7](i.8.7-assignment-compatibility.md)) when loaded onto the stack (§[III.1.1.1](iii.1.1.1-numeric-data-types.md)).
 
 _[Note:_ that is arguments that hold an integer value smaller than 4 bytes, a boolean, or a character are converted to 4 bytes by sign or zero-extension as appropriate. Floating-point values are converted to their native size (type `F`). _end note]_
 

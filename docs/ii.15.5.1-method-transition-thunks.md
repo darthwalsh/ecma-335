@@ -7,7 +7,7 @@ In order to call managed code from unmanaged code, some platforms require a spec
  | _Decl_ ::= | Clause
  | ---- | ----
  | `.vtfixup` _VTFixupDecl_
- | \| &hellip; | §II.5.10
+ | \| &hellip; | §[II.5.10](ii.5.10-ilasm-source-files.md)
 
 The **.vtfixup** directive declares that at a certain memory location there is a table that contains metadata tokens referring to methods that shall be converted into method pointers. The CLI will do this conversion automatically when the file containing the **.vtfixup** directive is loaded into memory for execution. The declaration specifies the number of entries in the table, the kind of method pointer that is required, the width of an entry in the table, and the location of the table:
 
