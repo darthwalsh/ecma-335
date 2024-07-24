@@ -1,6 +1,6 @@
 ## III.1.7.1 The instruction stream
 
-The implementation of a method is provided by a contiguous block of CIL instructions, encoded as specified below. The address of the instruction block for a method as well as its length is specified in the file format (see [Partition II](#todo-missing-hyperlink), CIL Physical Layout). The first instruction is at the first byte (lowest address) of the instruction block.
+The implementation of a method is provided by a contiguous block of CIL instructions, encoded as specified below. The address of the instruction block for a method as well as its length is specified in the file format (see [Partition II](ii.25-file-format-extensions-to-pe.md), CIL Physical Layout). The first instruction is at the first byte (lowest address) of the instruction block.
 
 Instructions are variable in size. The size of each instruction can be determined (decoded) from the content of the instruction bytes themselves. The size of and ordering of the bytes within an instruction is specified by each instruction definition. Instructions follow each other without padding in a stream of bytes that is both alignment and byte-order insensitive.
 

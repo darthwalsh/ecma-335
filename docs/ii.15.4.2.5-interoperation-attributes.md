@@ -4,4 +4,4 @@
  | ----
  | \| `pinvokeimpl` `'('` _QSTRING_ [ `as` _QSTRING_ ] _PinvAttr_* `')'`
 
-See §[II.15.5.2](ii.15.5.2-platform-invoke.md) and §[22.22](#todo-missing-hyperlink).
+See §[II.15.5.2](ii.15.5.2-platform-invoke.md) and §[22.22](ii.22.20-genericparam-0x2a.md).

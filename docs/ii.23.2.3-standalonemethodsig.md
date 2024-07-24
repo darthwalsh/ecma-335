@@ -18,7 +18,7 @@ This diagram uses the following abbreviations (§[II.15.3](ii.15.3-calling-conve
 
 The first byte of the Signature holds bits for `HASTHIS`, `EXPLICITTHIS` and calling convention &ndash; `DEFAULT`, `VARARG`, `C`, `STDCALL`, `THISCALL`, or `FASTCALL`. These are OR'd together.
 
-_ParamCount_ is an unsigned integer that holds the number of non-vararg and vararg parameters, combined. It can be any number between 0 and 0x1FFFFFFF. The compiler compresses it (see §[15](#todo-missing-hyperlink)) &ndash; before storing into the blob (_ParamCount_ counts just the method parameters &ndash; it does not include the method's return type)
+_ParamCount_ is an unsigned integer that holds the number of non-vararg and vararg parameters, combined. It can be any number between 0 and 0x1FFFFFFF. The compiler compresses it (see §[15](ii.3-validation-and-verification.md)) &ndash; before storing into the blob (_ParamCount_ counts just the method parameters &ndash; it does not include the method's return type)
 
 The _RetType_ item describes the type of the method's return value (§[II.23.2.11](ii.23.2.11-rettype.md)) 
 

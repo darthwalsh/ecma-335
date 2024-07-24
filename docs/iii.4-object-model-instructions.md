@@ -12,4 +12,4 @@ _[Rationale:_ The object model instructions provide a common, efficient implemen
 
  * Exception handling
 
- * Boxing and unboxing to convert between reference-based objects and value types For more details, see [Partition I](#todo-missing-hyperlink). _end rationale]_
+ * Boxing and unboxing to convert between reference-based objects and value types For more details, see [Partition I](i.8-common-type-system.md). _end rationale]_

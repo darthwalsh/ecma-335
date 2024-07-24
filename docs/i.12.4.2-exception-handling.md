@@ -1,6 +1,6 @@
 ## I.12.4.2 Exception handling
 
-Exception handling is supported in the CLI through exception objects and protected blocks of code. When an exception occurs, an object is created to represent the exception. All exception objects are instances of some class (i.e., they can be boxed value types, but not pointers, unboxed value types, etc.). Users can create their own exception classes, typically by deriving from `System.Exception` (see [Partition IV](#todo-missing-hyperlink)).
+Exception handling is supported in the CLI through exception objects and protected blocks of code. When an exception occurs, an object is created to represent the exception. All exception objects are instances of some class (i.e., they can be boxed value types, but not pointers, unboxed value types, etc.). Users can create their own exception classes, typically by deriving from `System.Exception` (see [Partition IV](iv.3.1-the-kernel-profile.md)).
 
 There are four kinds of handlers for protected blocks. A single protected block shall have exactly one handler associated with it:
 

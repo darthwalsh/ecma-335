@@ -35,7 +35,7 @@ Integral operations throw `System.ArithmeticException` if the result cannot be r
 
 Integral operations throw `DivideByZeroException` if _value2_ is zero.
 
-Floating-point operations never throw an exception (they produce **NaN**s or infinities instead, see [Partition I](#todo-missing-hyperlink)).
+Floating-point operations never throw an exception (they produce **NaN**s or infinities instead, see [Partition I](i.12.1.3-handling-of-floating-point-data-types.md)).
 
 #### Example:
 

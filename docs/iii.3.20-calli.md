@@ -10,13 +10,13 @@
 
 #### Description:
 
-The `calli` instruction calls _ftn_ (a pointer to a method entry point) with the arguments _arg0_ &hellip; _argN_. The types of these arguments are described by the signature _callsitedescr_. (See [Partition I](#todo-missing-hyperlink) for a description of the CIL calling sequence.) The `calli` instruction can be immediately preceded by a `tail.` prefix to specify that the current method state should be released before transferring control. If the call would transfer control to a method of higher trust than the originating method the stack frame will not be released; instead, the execution will continue silently as if the `tail.` prefix had not been supplied.
+The `calli` instruction calls _ftn_ (a pointer to a method entry point) with the arguments _arg0_ &hellip; _argN_. The types of these arguments are described by the signature _callsitedescr_. (See [Partition I](i.12.3-machine-state.md) for a description of the CIL calling sequence.) The `calli` instruction can be immediately preceded by a `tail.` prefix to specify that the current method state should be released before transferring control. If the call would transfer control to a method of higher trust than the originating method the stack frame will not be released; instead, the execution will continue silently as if the `tail.` prefix had not been supplied.
 
 [A callee of "higher trust" is defined as one whose permission grant-set is a strict superset of the grant-set of the caller.]
 
 The _ftn_ argument must be a method pointer to a method that can be legitimately called with the arguments described by _callsitedescr_ (a metadata token for a stand-alone signature). Such a pointer can be created using the `ldftn` or `ldvirtftn` instructions, or could have been passed in from native code.
 
-The standalone signature specifies the number and type of parameters being passed, as well as the calling convention (See [Partition II](#todo-missing-hyperlink)) The calling convention is not checked dynamically, so code that uses a `calli` instruction will not work correctly if the destination does not actually use the specified calling convention.
+The standalone signature specifies the number and type of parameters being passed, as well as the calling convention (See [Partition II](ii.22-metadata-logical-format-tables.md)) The calling convention is not checked dynamically, so code that uses a `calli` instruction will not work correctly if the destination does not actually use the specified calling convention.
 
 The arguments are placed on the stack in left-to-right order. That is, the first argument is computed and placed on the stack, then the second argument, and so on. The argument-building code sequence for an instance or virtual method shall push that instance reference (the *this* pointer, which shall not be null) first. _[Note:_ for calls to methods on value types, the *this* pointer is a managed pointer, not an instance reference. §[I.8.6.1.5](#todo-missing-hyperlink). _end note]_
 

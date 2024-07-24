@@ -1,6 +1,6 @@
 ## II.9.9 Inheritance and overriding
 
-Member inheritance is defined in [Partition I](#todo-missing-hyperlink), in "Member Inheritance". (Overriding and hiding are also defined in that partition, in "Hiding, overriding, and layout".) This definition is extended, in an obvious manner, in the presence of generics. Specifically, in order to determine whether a member hides (for static or instance members) or overrides (for virtual methods) a member from a base class or interface, simply substitute each generic parameter with its generic argument, and compare the resulting member signatures.
+Member inheritance is defined in [Partition I](i.8.10-member-inheritance.md), in "Member Inheritance". (Overriding and hiding are also defined in that partition, in "Hiding, overriding, and layout".) This definition is extended, in an obvious manner, in the presence of generics. Specifically, in order to determine whether a member hides (for static or instance members) or overrides (for virtual methods) a member from a base class or interface, simply substitute each generic parameter with its generic argument, and compare the resulting member signatures.
 
 _[Example:_ The following illustrates this point:
 

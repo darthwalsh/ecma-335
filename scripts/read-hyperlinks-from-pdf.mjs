@@ -251,6 +251,28 @@ function linksInMd(f) {
   return links;
 }
 
+function updateMdLinks(f, links) {
+  const content = fs.readFileSync(path.join(docsPath, f), "utf-8");
+  const regex = /\]\(([^\)]+)\)|(https?(?:(?!\. )\S)+)/g;
+
+  let i = 0;
+  const updated = content.replace(regex, match => {
+    if (match.endsWith(".png)")) return match;
+    if (match.startsWith("http") || links[i].startsWith("#todo")) { 
+      // Don't change anything, but need to increment i to skip forward in links
+      ++i;
+      return match;
+    }
+    return `](${links[i++]})`;
+  });
+  if (i !== links.length) {
+    console.log(links.join("\n"));
+    console.log(i);
+    throw new Error("Mismatched link count: " + f);
+  }
+  fs.writeFileSync(path.join(docsPath, f), updated);
+}
+
 function printDiff(arr1, arr2) {
   const s1 = arr1.map(s => " " + s).join("\n");
   const s2 = arr2.map(s => " " + s).join("\n");
@@ -289,6 +311,7 @@ for (const sect of allSections) {
     case "IV.7.1": continue; // Link to Figure 0-4 was too hard to parse
   }
 
+
   // Ignore sections with PDF weirdness. I manually checked all links in files:
   switch (sect.text) {
     case "I.12.1.4": continue; // The PDF links I.12.3.2.1 to I.12.3.1
@@ -301,10 +324,11 @@ for (const sect of allSections) {
     case "II.6.4": continue; // The PDF links II.22.30 to II.22.16
     case "II.9.1": continue; // The PDF should link to i.8.7.3 but instead links to C:/Users/Joel...
     case "II.10.1.5": continue; // The PDF links II.23.1.15 to II.13
-    case "II.10.1.7": continue; // the PDF links II.9.5 to II.10.5.3 (twice) TODO change to "text says" "but it links "
+    case "II.10.1.7": continue; // the PDF links II.9.5 to II.10.5.3 (twice) // TODO change to "text says" "but it links "
     case "II.10.2": continue; // The second PDF link to II.10.6 is broken
     case "II.10.3.2": continue; // The PDF link to II.22.27 is broken
     case "II.10.3.3": continue; // The PDF text says II.23.1.10 but it links to II.12
+    case "II.14.4.2": continue; // The PDF links Partition III to II.14.4.2 (itself)
     case "II.14.6": continue; // The PDF links II.24.6.1 to II.10.5.1
     case "II.16": continue; // The PDF links II.5.4 to II.16.2
     case "II.17": continue; // The PDF links II.21 to "i.10.6-custom-attributes" instead of "ii.21-custom-attribute"
@@ -323,8 +347,10 @@ for (const sect of allSections) {
     case "III.1.8.1.1": continue; // The PDF links III.1.8.1.2.2 to III.1.5, III.2.3 to III.1.5, and III.4.28 to III.4.30
     case "III.3.45": continue; // The PDF links I.8.7.3 to I.8.7
     case "III.1.8.1.2.1": continue; // The PDF links III.1.8 to III.1.5
+    case "III.2.5": continue; // The PDF links Partition I, 12.7 to I.12.6
     case "III.4.2": continue; // The PDF links III.1.8 to III.1.5
     case "III.4.15": continue; // The PDF links III.1.8 to III.1.5 (twice)
+    case "IV.7.2.2": continue; // The PDF links Partition II, "Delegates" to I.8.9.3
   }
 
 
@@ -369,8 +395,7 @@ for (const sect of allSections) {
     printDiff(pdfLinksAsMd, mdLinks);
   }
 
-  // TODO fix the #todo- links in Markdown when the PDF isn't #todo-
-  continue;
+  updateMdLinks(headingFile, pdfLinksAsMd);
 }
 
 console.log(problemCount, "problems found");

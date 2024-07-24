@@ -22,7 +22,7 @@ The **extends** keyword specifies the *base type* of a type. A type shall extend
 
 The **implements** keyword specifies the *interfaces* of a type. By listing an interface here, a type declares that all of its concrete implementations will support the contract of that interface, including providing implementations of any virtual methods the interface declares. See also §[II.11](ii.11-semantics-of-classes.md) and §[II.12](ii.12-semantics-of-interfaces.md).
 
-The left-to-right order of the _TypeSpec_ after the **implements** keyword is preserved as a top-to-bottom ordering in the _InterfaceImpl_ table (§[22.23](#todo-missing-hyperlink)). This is required to support variance resolution in interface dispatch (§[12.2](#todo-missing-hyperlink)).
+The left-to-right order of the _TypeSpec_ after the **implements** keyword is preserved as a top-to-bottom ordering in the _InterfaceImpl_ table (§[22.23](ii.22.23-interfaceimpl-0x09.md)). This is required to support variance resolution in interface dispatch (§[12.2](ii.12.2-implementing-virtual-methods-on-interfaces.md)).
 
 _[Example:_ This code declares the class `CounterTextBox`, which extends the class `System.Windows.Forms.TextBox` in the assembly `System.Windows.Forms`, and implements the interface `CountDisplay` in the module `Counter` of the current assembly. The attributes **private**, **auto** and **autochar** are described in the following subclauses.
 

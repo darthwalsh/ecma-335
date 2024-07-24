@@ -1,6 +1,6 @@
 ## II.19 Exception handling
 
-In the CLI, a method can define a range of CIL instructions that are said to be _protected_. This is called a _try block_. It can then associate one or more _handlers_ with that try block. If an exception occurs during execution anywhere within the try block, an exception object is created that describes the problem. The CLI then takes over, transferring control from the point at which the exception was thrown, to the block of code that is willing to handle that exception. See [Partition I](#todo-missing-hyperlink).
+In the CLI, a method can define a range of CIL instructions that are said to be _protected_. This is called a _try block_. It can then associate one or more _handlers_ with that try block. If an exception occurs during execution anywhere within the try block, an exception object is created that describes the problem. The CLI then takes over, transferring control from the point at which the exception was thrown, to the block of code that is willing to handle that exception. See [Partition I](i.12.4.2-exception-handling.md).
 
 No two handlers (fault, filter, catch, or finally) can have the same starting address. When an exception occurs it is necessary to convert the execution address to the correct most lexically nested try block in which the exception occurred.
 
@@ -8,7 +8,7 @@ No two handlers (fault, filter, catch, or finally) can have the same starting ad
  | ----
  | _TryBlock_ _SEHClause_ [ _SEHClause_* ]
 
-The next few subclauses expand upon this simple description, by describing the five kinds of code block that take part in exception processing: **try**, **catch**, **filter**, **finally**, and **fault**. (Note that there are restrictions upon how many, and what kinds of _SEHClause_ a given _TryBlock_ can have; see [Partition I](#todo-missing-hyperlink) for details.)
+The next few subclauses expand upon this simple description, by describing the five kinds of code block that take part in exception processing: **try**, **catch**, **filter**, **finally**, and **fault**. (Note that there are restrictions upon how many, and what kinds of _SEHClause_ a given _TryBlock_ can have; see [Partition I](i.12.4.2-exception-handling.md) for details.)
 
 The remaining syntax items are described in detail below; they are collected here for reference.
 

@@ -20,7 +20,7 @@ There are two kinds of columns that index a metadata table. (For details of the 
 
 Metadata preserves name strings, as created by a compiler or code generator, unchanged. Essentially, it treats each string as an opaque blob. In particular, it preserves case. The CLI imposes no limit on the length of names stored in metadata and subsequently processed by the CLI.
 
-Matching *AssemblyRef*s and *ModuleRef*s to their corresponding *Assembly* and *Module* shall be performed case-blind (see [Partition I](#todo-missing-hyperlink)). However, all other name matches (type, field, method, property, event) shall be exact&mdash;so that this level of resolution is the same across all platforms, whether their OS is case-sensitive or not.
+Matching *AssemblyRef*s and *ModuleRef*s to their corresponding *Assembly* and *Module* shall be performed case-blind (see [Partition I](i.9.6-assemblies-name-scopes-for-types.md)). However, all other name matches (type, field, method, property, event) shall be exact&mdash;so that this level of resolution is the same across all platforms, whether their OS is case-sensitive or not.
 
 Tables are given both a name (e.g., "Assembly") and a number (e.g., 0x20).  The number for each table is listed immediately with its title in the following subclauses. The table numbers indicate the order in which their corresponding table shall appear in the PE file, and there is a set of bits (§[II.24.2.6](ii.24.2.6-metadata-stream.md)) saying whether a given table exists or not. The number of a table is the position within that set of bits.
 

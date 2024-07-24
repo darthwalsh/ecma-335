@@ -10,7 +10,7 @@
 
 #### Description:
 
-The `rethrow` instruction is only permitted within the body of a **catch** handler (see [Partition I](#todo-missing-hyperlink)). It throws the same exception that was caught by this handler. A rethrow does not change the stack trace in the object.
+The `rethrow` instruction is only permitted within the body of a **catch** handler (see [Partition I](i.12.4.2-exception-handling.md)). It throws the same exception that was caught by this handler. A rethrow does not change the stack trace in the object.
 
 #### Exceptions:
 

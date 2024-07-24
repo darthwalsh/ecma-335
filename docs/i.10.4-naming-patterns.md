@@ -1,6 +1,6 @@
 ## I.10.4 Naming patterns
 
-See also [Partition VI](#todo-missing-hyperlink).
+See also [Partition VI](vi.d-class-library-design-guidelines.md).
 
 While the CTS does not dictate the naming of properties or events, the CLS does specify a pattern to be observed.
 

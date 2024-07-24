@@ -18,7 +18,7 @@ _[Rationale:_ While the alignment for a `cpblk` instruction would logically requ
 
 The `unaligned.` and `volatile.` prefixes can be combined in either order. They shall immediately precede a `ldind`, `stind`, `ldfld`, `stfld`, `ldobj`, `stobj`, `initblk`, or `cpblk` instruction.
 
-_[Note:_ See [Partition I, 12.7](#todo-missing-hyperlink) for information about atomicity and data alignment. _end note]_
+_[Note:_ See [Partition I, 12.7](i.12.6-memory-model-and-optimizations.md) for information about atomicity and data alignment. _end note]_
 
 #### Exceptions:
 

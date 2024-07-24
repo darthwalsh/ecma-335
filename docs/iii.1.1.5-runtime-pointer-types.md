@@ -1,6 +1,6 @@
 ## III.1.1.5 Runtime pointer types
 
-There are two kinds of pointers: unmanaged pointers and managed pointers. For pointers into the same array or object (see [Partition I](#todo-missing-hyperlink)), the following arithmetic operations are defined:
+There are two kinds of pointers: unmanaged pointers and managed pointers. For pointers into the same array or object (see [Partition I](i.8.9.2-unmanaged-pointer-types.md)), the following arithmetic operations are defined:
 
  * Adding an integer to a pointer, where the integer is interpreted as a number of bytes, results in a pointer of the same kind.
 

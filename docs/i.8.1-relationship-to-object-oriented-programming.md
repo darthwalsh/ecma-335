@@ -8,6 +8,6 @@ Unlike in some OOP languages, in the CTS, two objects that have fundamentally di
 
 Similarly, some OOP languages (e.g., Smalltalk) consider message passing to be the fundamental model of computation. In the CTS, this corresponds to calling virtual methods (see §[I.8.4.4](i.8.4.4-virtual-methods.md)), where the signature of the virtual method plays the role of the message.
 
-The CTS itself does not directly capture the notion of "typeless programming." That is, there is no way to call a non-static method without knowing the type of the object. Nevertheless, typeless programming can be implemented based on the facilities provided by the reflection package (see [Partition IV - Reflection](#todo-missing-hyperlink)) if it is implemented.
+The CTS itself does not directly capture the notion of "typeless programming." That is, there is no way to call a non-static method without knowing the type of the object. Nevertheless, typeless programming can be implemented based on the facilities provided by the reflection package (see [Partition IV - Reflection](iv.5.5-reflection-library.md)) if it is implemented.
 
 > _End informative text._

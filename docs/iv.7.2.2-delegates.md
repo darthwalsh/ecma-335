@@ -9,7 +9,7 @@ The standard library contains a number of delegate types. However, as recorded i
     sender, class System.EventArgs e) }
  ```
 
-However, this type also has a constructor and two optional asynchronous methods, `BeginInvoke` and `EndInvoke`, all of which are described in [Partition II, "Delegates"](#todo-missing-hyperlink). The signatures for these three members for `System.EventHandler` are as follows:
+However, this type also has a constructor and two optional asynchronous methods, `BeginInvoke` and `EndInvoke`, all of which are described in [Partition II, "Delegates"](i.8.9.3-delegates.md). The signatures for these three members for `System.EventHandler` are as follows:
 
  ```ilasm
  .method public hidebysig specialname rtspecialname void .ctor(object
@@ -21,4 +21,4 @@ However, this type also has a constructor and two optional asynchronous methods,
         class System.IAsyncResult result)
  ```
 
-The other standard delegate types have a corresponding constructor and method pair whose signatures can be deduced from the ILAsm in the XML and the information in [Partition II, "Delegates"](#todo-missing-hyperlink). Unless stated otherwise, a standard delegate type provides the two optional asynchronous methods, `BeginInvoke` and `EndInvoke`.
+The other standard delegate types have a corresponding constructor and method pair whose signatures can be deduced from the ILAsm in the XML and the information in [Partition II, "Delegates"](i.8.9.3-delegates.md). Unless stated otherwise, a standard delegate type provides the two optional asynchronous methods, `BeginInvoke` and `EndInvoke`.

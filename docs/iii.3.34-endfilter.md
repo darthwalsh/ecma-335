@@ -10,7 +10,7 @@
 
 #### Description:
 
-Used to return from the **filter** clause of an exception (see the _Exception Handling_ subclause of [Partition I](#todo-missing-hyperlink) for a discussion of exceptions). _value_ (which shall be of type `int32` and one of a specific set of values) is returned from the **filter** clause. It should be one of:
+Used to return from the **filter** clause of an exception (see the _Exception Handling_ subclause of [Partition I](i.12.4.2-exception-handling.md) for a discussion of exceptions). _value_ (which shall be of type `int32` and one of a specific set of values) is returned from the **filter** clause. It should be one of:
 
  * `exception_continue_search` (0) to continue searching for an exception handler
 

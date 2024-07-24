@@ -14,7 +14,7 @@ _[Rationale:_ Guaranteeing automatic initialization of unboxed value types is bo
  
 _[Note:_ Boxed value types are classes and follow the rules for classes. _end note]_
 
-The instruction `initobj` (see [Partition III](#todo-missing-hyperlink)) performs zero-initialization under program control. If a value type has a constructor, an instance of its unboxed type can be created as is done with classes. The `newobj` instruction (see [Partition III](#todo-missing-hyperlink)) is used along with the initializer and its parameters to allocate and initialize the instance. The instance of the value type will be allocated on the stack. The Base Class Library provides the method `System.Array.Initialize` (see [Partition IV](#todo-missing-hyperlink)) to zero all instances in an array of unboxed value types.
+The instruction `initobj` (see [Partition III](iii.4.5-initobj.md)) performs zero-initialization under program control. If a value type has a constructor, an instance of its unboxed type can be created as is done with classes. The `newobj` instruction (see [Partition III](iii.4.21-newobj.md)) is used along with the initializer and its parameters to allocate and initialize the instance. The instance of the value type will be allocated on the stack. The Base Class Library provides the method `System.Array.Initialize` (see [Partition IV](#todo-missing-hyperlink)) to zero all instances in an array of unboxed value types.
 
 _[Example:_ The following code declares and initializes three value type variables. The first variable is zero-initialized, the second is initialized by calling an instance constructor, and the third by creating the object on the stack and storing it into the local.
 

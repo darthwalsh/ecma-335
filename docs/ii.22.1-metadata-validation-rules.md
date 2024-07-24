@@ -4,7 +4,7 @@
 
 The subclauses that follow describe the schema for each kind of metadata table, and explain the detailed rules that guarantee metadata emitted into any PE file is valid. Checking that metadata is valid ensures that later processing (such as checking the CIL instruction stream for type safety, building method tables, CIL-to-native-code compilation, and data marshalling) will not cause the CLI to crash or behave in an insecure fashion.
 
-In addition, some of the rules are used to check compliance with the CLS requirements (see [Partition I](#todo-missing-hyperlink)) even though these are not related to valid Metadata. These are marked with a trailing **\[CLS\]** tag.
+In addition, some of the rules are used to check compliance with the CLS requirements (see [Partition I](i.10-name-and-type-rules-for-the-common-language-specification.md)) even though these are not related to valid Metadata. These are marked with a trailing **\[CLS\]** tag.
 
 The rules for valid metadata refer to an individual module. A module is any collection of metadata that *could* typically be saved to a disk file. This includes the output of compilers and linkers, or the output of script compilers (where the metadata is often held only in memory, but never actually saved to a file on disk).
 
@@ -16,7 +16,7 @@ All checks are categorized as ERROR, WARNING, or CLS.
 
  * A WARNING check reports something, not actually wrong, but possibly a slip on the part of the compiler. Normally, it indicates a case where a compiler could have encoded the same information in a more compact fashion or where the metadata represents a construct that can have no actual use at runtime. All conforming implementations shall support metadata that violate only WARNING rules; hence such metadata is both valid and portable.
 
- * A CLS check reports lack of compliance with the Common Language Specification (see [Partition I](#todo-missing-hyperlink)). Such metadata is both valid and portable, but programming languages might exist that cannot process it, even though all conforming implementations of the CLI support the constructs.
+ * A CLS check reports lack of compliance with the Common Language Specification (see [Partition I](i.10-name-and-type-rules-for-the-common-language-specification.md)). Such metadata is both valid and portable, but programming languages might exist that cannot process it, even though all conforming implementations of the CLI support the constructs.
 
 Validation rules fall into the following broad categories:
 

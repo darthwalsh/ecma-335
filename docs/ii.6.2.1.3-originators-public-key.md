@@ -5,7 +5,7 @@
  | `.publickey` `'='` `'('` _Bytes_ `')'`
  | \| &hellip; 
  
-The CLI metadata allows the producer of an assembly to compute a cryptographic hash of that assembly (using the SHA-1 hash function) and then to encrypt it using the RSA algorithm (see [Partition I](#todo-missing-hyperlink)) and a public/private key pair of the producer's choosing. The results of this (an "SHA1/RSA digital signature") can then be stored in the metadata (§[II.25.3.3](ii.25.3.3-cli-header.md)) along with the public part of the key pair required by the RSA algorithm. The **.publickey** directive is used to specify the public key that was used to compute the signature. To calculate the hash, the signature is zeroed, the hash calculated, and then the result is stored into the signature.
+The CLI metadata allows the producer of an assembly to compute a cryptographic hash of that assembly (using the SHA-1 hash function) and then to encrypt it using the RSA algorithm (see [Partition I](i.3-normative-references.md)) and a public/private key pair of the producer's choosing. The results of this (an "SHA1/RSA digital signature") can then be stored in the metadata (§[II.25.3.3](ii.25.3.3-cli-header.md)) along with the public part of the key pair required by the RSA algorithm. The **.publickey** directive is used to specify the public key that was used to compute the signature. To calculate the hash, the signature is zeroed, the hash calculated, and then the result is stored into the signature.
 
 > All of the assemblies in the Standard Library (see Partition IV) use the public key `00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00`. This key is known as the *Standard Public Key* in this standard.
 

@@ -10,7 +10,7 @@
 
 #### Description:
 
-The `throw` instruction throws the exception _object_ (type `O`) on the stack and empties the stack. For details of the exception mechanism, see [Partition I](#todo-missing-hyperlink).
+The `throw` instruction throws the exception _object_ (type `O`) on the stack and empties the stack. For details of the exception mechanism, see [Partition I](i.12.4.2-exception-handling.md).
 
 _[Note:_ While the CLI permits any object to be thrown, the CLS describes a specific exception class that shall be used for language interoperability. _end note]_
 

@@ -10,7 +10,7 @@
 
 #### Description:
 
-A value type has two separate representations (see [Partition I](#todo-missing-hyperlink)) within the CLI:
+A value type has two separate representations (see [Partition I](i.8.9.7-value-type-definition.md)) within the CLI:
 
  * A 'raw' form used when a value type is embedded within another object.
 

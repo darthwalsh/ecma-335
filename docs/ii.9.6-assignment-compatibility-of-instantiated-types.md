@@ -1,6 +1,6 @@
 ## II.9.6 Assignment compatibility of instantiated types
 
- * Assignment compatibility is defined in [Partition I.8.7](#todo-missing-hyperlink).
+ * Assignment compatibility is defined in [Partition I.8.7](i.8.7-assignment-compatibility.md).
 
 _[Example:_
 

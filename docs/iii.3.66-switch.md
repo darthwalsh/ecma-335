@@ -14,7 +14,7 @@ The `switch` instruction implements a jump table. The format of the instruction 
 
 The `switch` instruction pops value off the stack and compares it, as an unsigned integer, to _n_. If value is less than _n_, execution is transferred to the _value_'th target, where targets are numbered from 0 (i.e., a value of 0 takes the first target, a value of 1 takes the second target, and so on). If _value_ is not less than _n_, execution continues at the next instruction (fall through).
 
-If the target instruction has one or more prefix codes, control can only be transferred to the first of these prefixes. Control transfers into and out of **try**, **catch**, **filter**, and **finally** blocks cannot be performed by this instruction. (Such transfers are severely restricted and shall use the `leave` instruction instead; see [Partition I](#todo-missing-hyperlink) for details).
+If the target instruction has one or more prefix codes, control can only be transferred to the first of these prefixes. Control transfers into and out of **try**, **catch**, **filter**, and **finally** blocks cannot be performed by this instruction. (Such transfers are severely restricted and shall use the `leave` instruction instead; see [Partition I](i.12.4.2-exception-handling.md) for details).
 
 #### Exceptions:
 

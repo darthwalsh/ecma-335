@@ -16,4 +16,4 @@ Frameworks shall not:
 
  * Require users to define new generic types/methods, override existing generic methods, or deal with partially constructed generics in any way.
 
- A CLS Rule applies to this topic; see the normative text at the end of §[7.2](#todo-missing-hyperlink).
+ A CLS Rule applies to this topic; see the normative text at the end of §[7.2](i.7.2-views-of-cls-compliance.md).

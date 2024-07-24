@@ -15,7 +15,7 @@ The method body shall contain the instructions of a program. However, it can als
  | \| `.param` `'['` _Int32_ `']'` [ `'='` _FieldInit_ ] | Store a constant _FieldInit_ value for parameter _Int32_ | §[II.15.4.1.4](ii.15.4.1.4-the-param-directive.md)
  | \| `.param type` `'['` _Int32_ `']'` | Specifies a type parameter for a generic method | §[II.15.4.1.5](ii.15.4.1.5-the-param-type_directive.md)
  | \| _ExternSourceDecl_ | `.line` or `#line` | §[II.5.7](ii.5.7-source-line-information.md)
- | \| _Instr_ | An instruction | [Partition VI](#todo-missing-hyperlink)
+ | \| _Instr_ | An instruction | [Partition VI](vi.c-cil-assembler-implementation.md)
  | \| _Id_ `':'` | A label | §[II.5.4](ii.5.4-labels-and-lists-of-labels.md)
  | \| _ScopeBlock_ | Lexical scope of local variables | §[II.15.4.4](ii.15.4.4-scope-blocks.md)
  | \| _SecurityDecl_ | `.permission` or `.permissionset` | §[II.20](ii.20-declarative-security.md)

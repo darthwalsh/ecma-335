@@ -21,7 +21,7 @@ _target_ is represented as a signed offset (4 bytes for `brtrue`, 1 byte for `br
 
 If the target instruction has one or more prefix codes, control can only be transferred to the first of these prefixes.
 
-Control transfers into and out of **try**, **catch**, **filter**, and **finally** blocks cannot be performed by this instruction. (Such transfers are severely restricted and shall use the `leave` instruction instead; see [Partition I](#todo-missing-hyperlink) for details).
+Control transfers into and out of **try**, **catch**, **filter**, and **finally** blocks cannot be performed by this instruction. (Such transfers are severely restricted and shall use the `leave` instruction instead; see [Partition I](i.12.4.2-exception-handling.md) for details).
 
 #### Exceptions:
 

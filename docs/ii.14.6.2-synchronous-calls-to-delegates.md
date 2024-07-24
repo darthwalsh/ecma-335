@@ -59,4 +59,4 @@ Note that the example above creates a delegate to a non-virtual function. If `on
 
 _end example]_
 
-_[Note:_ The code sequence above shall use `dup` &ndash; not `ldloc InstanceOne` twice. The `dup` code sequence is easily recognized as type-safe, whereas alternatives would require more complex analysis. Verifiability of code is discussed in [Partition III](#todo-missing-hyperlink) _end note]_
+_[Note:_ The code sequence above shall use `dup` &ndash; not `ldloc InstanceOne` twice. The `dup` code sequence is easily recognized as type-safe, whereas alternatives would require more complex analysis. Verifiability of code is discussed in [Partition III](iii.1.8-verifiability-and-correctness.md) _end note]_

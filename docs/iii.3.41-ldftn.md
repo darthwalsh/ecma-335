@@ -10,7 +10,7 @@
 
 #### Description:
 
-The `ldftn` instruction pushes a method pointer (§[II.14.5](ii.14.5-method-pointers.md)) to the native code implementing the method described by _method_ (a metadata token, either a `methoddef` or `methodref` (see [Partition II](#todo-missing-hyperlink))), or to some other implementation-specific description of _method_ (see Note) onto the stack). The value pushed can be called using the `calli` instruction if it references a managed method (or a stub that transitions from managed to unmanaged code). It may also be used to construct a delegate, stored in a variable, etc.
+The `ldftn` instruction pushes a method pointer (§[II.14.5](ii.14.5-method-pointers.md)) to the native code implementing the method described by _method_ (a metadata token, either a `methoddef` or `methodref` (see [Partition II](ii.22-metadata-logical-format-tables.md))), or to some other implementation-specific description of _method_ (see Note) onto the stack). The value pushed can be called using the `calli` instruction if it references a managed method (or a stub that transitions from managed to unmanaged code). It may also be used to construct a delegate, stored in a variable, etc.
 
 The CLI resolves the method pointer according to the rules specified in §[I.12.4.1.3](i.12.4.1.3-computed-destinations.md) (Computed destinations), except that the destination is computed with respect to the class specified by _method_.
 

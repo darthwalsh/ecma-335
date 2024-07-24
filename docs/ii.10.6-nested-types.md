@@ -1,6 +1,6 @@
 ## II.10.6 Nested types
 
-Nested types are specified in [Partition I](#todo-missing-hyperlink). For information about the logical tables associated with nested types, see §[II.22.32](ii.22.32-nestedclass-0x29.md).
+Nested types are specified in [Partition I](i.8.5.3.4-nested-types.md). For information about the logical tables associated with nested types, see §[II.22.32](ii.22.32-nestedclass-0x29.md).
 
 _[Note:_ A nested type is not associated with an instance of its enclosing type. The nested type has its own base type, and can be instantiated independently of its enclosing type. This means that the instance members of the enclosing type are not accessible using the **this** pointer of the nested type.
 

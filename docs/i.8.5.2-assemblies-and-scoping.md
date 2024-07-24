@@ -18,7 +18,7 @@ Generally, names are not unique. Names are collected into groupings called **sco
 
 A named entity has its name in exactly one scope. Hence, to identify a named entity, both a scope and a name need to be supplied. The scope is said to **qualify** the name. Types provide a scope for the names in the type; hence types qualify the names in the type. For example, consider a compound type `Point` that has a field named `x`. The name "field `x`" by itself does not uniquely identify the named field, but the qualified name "field `x` in type `Point`" does.
 
-Since types are named, the names of types are also grouped into scopes. To fully identify a type, the type name shall be qualified by the scope that includes the type name. A type name is scoped by the **assembly** that contains the implementation of the type. An assembly is a configured set of loadable code modules and other resources that together implement a unit of functionality. The type name is said to be in the **assembly scope** of the assembly that implements the type. Assemblies themselves have names that form the basis of the [CTS naming hierarchy](#todo-missing-hyperlink).
+Since types are named, the names of types are also grouped into scopes. To fully identify a type, the type name shall be qualified by the scope that includes the type name. A type name is scoped by the **assembly** that contains the implementation of the type. An assembly is a configured set of loadable code modules and other resources that together implement a unit of functionality. The type name is said to be in the **assembly scope** of the assembly that implements the type. Assemblies themselves have names that form the basis of the [CTS naming hierarchy](i.8-common-type-system.md).
 
 The **type definition**:
 
@@ -34,7 +34,7 @@ The CTS supports an **enum** (also known as an **enumeration type**), an alterna
 
  * It shall not have any methods of its own.
 
- * It shall derive from `System.Enum` (see [Partition IV Library – Kernel Profile](#todo-missing-hyperlink)).
+ * It shall derive from `System.Enum` (see [Partition IV Library – Kernel Profile](iv.3.1-the-kernel-profile.md)).
 
  * It shall not implement any interfaces of its own.
 

@@ -15,7 +15,7 @@ The evaluation stack shall be empty except for the arguments being transferred b
 
 Correct CIL shall not branch to the `call` instruction, but it is permitted to branch to the `ret`. The only values on the stack shall be the arguments for the method being called.
 
-The `tail.` `call` (or `calli` or `callvirt`) instruction cannot be used to transfer control out of a try, filter, catch, or finally block. See [Partition I](#todo-missing-hyperlink).
+The `tail.` `call` (or `calli` or `callvirt`) instruction cannot be used to transfer control out of a try, filter, catch, or finally block. See [Partition I](i.12.4.2-exception-handling.md).
 
 The current frame cannot be discarded when control is transferred from untrusted code to trusted code, since this would jeopardize code identity security. Security checks can therefore cause the `tail.` to be ignored, leaving a standard call instruction.
 

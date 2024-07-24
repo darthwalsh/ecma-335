@@ -15,7 +15,7 @@
 
 #### Description:
 
-The `ldarg` _num_ instruction pushes onto the evaluation stack, the _num_'th incoming argument, where arguments are numbered 0 onwards (see [Partition I](#todo-missing-hyperlink)). The type of the value on the stack is tracked by verification as the *intermediate type* (§[I.8.7](i.8.7-assignment-compatibility.md)) of the argument type, as specified by the current method's signature.
+The `ldarg` _num_ instruction pushes onto the evaluation stack, the _num_'th incoming argument, where arguments are numbered 0 onwards (see [Partition I](i.12.3-machine-state.md)). The type of the value on the stack is tracked by verification as the *intermediate type* (§[I.8.7](i.8.7-assignment-compatibility.md)) of the argument type, as specified by the current method's signature.
 
 The `ldarg.0`, `ldarg.1`, `ldarg.2`, and `ldarg.3` instructions are efficient encodings for loading any one of the first 4 arguments. The `ldarg.s` instruction is an efficient encoding for loading argument numbers 4&ndash;255.
 

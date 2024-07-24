@@ -14,7 +14,7 @@ A *pointer type* shall be defined by specifying a signature that includes the ty
 
  * Storing a value _V_ into the location referenced by a pointer _P_, where the type of _V_ is *assignable-to* (§[I.8.7.3](i.8.7.3-general-assignment-compatibility.md)) the type referenced by _P_.
 
-For pointers into the same array or object (see [Partition I](#todo-missing-hyperlink)) the following arithmetic operations are supported:
+For pointers into the same array or object (see [Partition I](i.8.9.2-unmanaged-pointer-types.md)) the following arithmetic operations are supported:
 
  * Adding an integer value to a pointer (where that value is interpreted as a number of bytes), which results in a pointer of the same kind
 

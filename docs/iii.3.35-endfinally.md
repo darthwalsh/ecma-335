@@ -11,7 +11,7 @@
 
 #### Description:
 
-Return from the **finally** or **fault** clause of an exception block (see the Exception Handling subclause of [Partition I](#todo-missing-hyperlink) for details).
+Return from the **finally** or **fault** clause of an exception block (see the Exception Handling subclause of [Partition I](i.12.4.2-exception-handling.md) for details).
 
 Signals the end of the **finally** or **fault** clause so that stack unwinding can continue until the exception handler is invoked. The `endfinally` or `endfault` instruction transfers control back to the CLI exception mechanism. This then searches for the next **finally** clause in the chain, if the protected block was exited with a `leave` instruction. If the protected block was exited with an exception, the CLI will search for the next **finally** or **fault**, or enter the exception handler chosen during the first pass of exception handling.
 

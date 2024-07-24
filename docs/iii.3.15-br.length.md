@@ -15,7 +15,7 @@ The `br` instruction unconditionally transfers control to _target_. _target_ is 
 
 If the target instruction has one or more prefix codes, control can only be transferred to the first of these prefixes.
 
-Control transfers into and out of **try**, **catch**, **filter**, and **finally** blocks cannot be performed by this instruction. (Such transfers are severely restricted and shall use the `leave` instruction instead; see [Partition I](#todo-missing-hyperlink) for details).
+Control transfers into and out of **try**, **catch**, **filter**, and **finally** blocks cannot be performed by this instruction. (Such transfers are severely restricted and shall use the `leave` instruction instead; see [Partition I](i.12.4.2-exception-handling.md) for details).
 
 _[Rationale:_ While a `leave` instruction can be used instead of a `br` instruction when the evaluation stack is empty, doing so might increase the resources required to compile from CIL to native code and/or lead to inferior native code. Therefore CIL generators should use a `br` instruction in preference to a `leave` instruction when both are valid. _end rationale]_
 
