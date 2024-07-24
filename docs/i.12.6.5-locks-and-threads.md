@@ -6,9 +6,9 @@ The logical abstraction of a thread of control is captured by an instance of the
 
 2. **Explicit locks and monitors.** These are provided in the class library, see `System.Threading.Monitor.` Many of the methods in the `System.Threading.Monitor` class accept an `Object` as argument, allowing direct access to the same lock that is used by synchronized methods. While the CLI is responsible for ensuring correct protocol when this lock is only used by synchronized methods, the user must accept this responsibility when using explicit monitors on these same objects.
 
-3. **Volatile reads and writes.** The CIL includes a prefix, `volatile.`, that specifies that the subsequent operation is to be performed with the cross-thread visibility constraints described in §[I.12.6.7]](#todo-missing-hyperlink). In addition, the class library provides methods to perform explicit volatile reads (`System.Thread.VolatileRead`) and writes (`System.Thread.VolatileWrite`), as well as barrier synchronization (`System.Thread.MemoryBarrier`).
+3. **Volatile reads and writes.** The CIL includes a prefix, `volatile.`, that specifies that the subsequent operation is to be performed with the cross-thread visibility constraints described in §[I.12.6.7](i.12.6.7-volatile-reads-and-writes.md). In addition, the class library provides methods to perform explicit volatile reads (`System.Thread.VolatileRead`) and writes (`System.Thread.VolatileWrite`), as well as barrier synchronization (`System.Thread.MemoryBarrier`).
 
-4. **Built-in atomic reads and writes.** All reads and writes of certain properly aligned data types are guaranteed to occur atomically. See §[I.12.6.6]](#todo-missing-hyperlink).
+4. **Built-in atomic reads and writes.** All reads and writes of certain properly aligned data types are guaranteed to occur atomically. See §[I.12.6.6](i.12.6.6-atomic-reads-and-writes.md).
 
 5. **Explicit atomic operations.** The class library provides a variety of atomic operations in the `System.Threading.Interlocked` class. These operations (e.g., `Increment`, `Decrement`, `Exchange`, and `CompareExchange`) perform implicit acquire/release operations.
 

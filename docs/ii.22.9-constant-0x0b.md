@@ -12,7 +12,7 @@ The _Constant_ table has the following columns:
 
 Note that _Constant_ information does not directly influence runtime behavior, although it is visible via Reflection (and hence can be used to implement functionality such as that provided by `System.Enum.ToString`). Compilers inspect this information, at compile time, when importing metadata, but the value of the constant itself, if used, becomes embedded into the CIL stream the compiler emits. There are no CIL instructions to access the _Constant_ table at runtime.
 
-A row in the _Constant_ table for a parent is created whenever a compile-time value is specified for that parent. (For an example, see §[II.16.2.](#todo-missing-hyperlink))
+A row in the _Constant_ table for a parent is created whenever a compile-time value is specified for that parent. (For an example, see §[II.16.2](ii.16.2-field-init-metadata.md).)
 
 > _This contains informative text only._
 
