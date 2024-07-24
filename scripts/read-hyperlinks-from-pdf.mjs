@@ -251,7 +251,9 @@ function linksInMd(f) {
   return links;
 }
 
-function printDiff(s1, s2) {
+function printDiff(arr1, arr2) {
+  const s1 = arr1.map(s => " " + s).join("\n");
+  const s2 = arr2.map(s => " " + s).join("\n");
   const file1 = "/tmp/diff-s1.tmp";
   const file2 = "/tmp/diff-s2.tmp";
 
@@ -289,23 +291,40 @@ for (const sect of allSections) {
 
   // Ignore sections with PDF weirdness. I manually checked all links in files:
   switch (sect.text) {
+    case "I.12.1.4": continue; // The PDF links I.12.3.2.1 to I.12.3.1
+    case "I.12.3.2": continue; // The PDF links I.12.3.2.1 to I.12.3.1
+    case "I.12.4": continue; // The PDF references I.12.4.2 but should be I.12.4.2.3 -- also mentioned in https://github.com/stakx/ecma-335/pull/22
     case "II.4.2": continue; // PDF has extra C:/Users/Joel link overtop Partition VI
     case "II.5.3": continue; // PDF has extra C:/Users/Joel link overtop Partition VI
     case "II.5.4": continue; // The PDF link to II.25 is broken
     case "II.6.2.3": continue; // The PDF link to II.22.19 is broken
+    case "II.6.4": continue; // The PDF links II.22.30 to II.22.16
     case "II.9.1": continue; // The PDF should link to i.8.7.3 but instead links to C:/Users/Joel...
+    case "II.10.1.5": continue; // The PDF links II.23.1.15 to II.13
+    case "II.10.1.7": continue; // the PDF links II.9.5 to II.10.5.3 (twice) TODO change to "text says" "but it links "
     case "II.10.2": continue; // The second PDF link to II.10.6 is broken
     case "II.10.3.2": continue; // The PDF link to II.22.27 is broken
     case "II.10.3.3": continue; // The PDF text says II.23.1.10 but it links to II.12
+    case "II.14.6": continue; // The PDF links II.24.6.1 to II.10.5.1
+    case "II.16": continue; // The PDF links II.5.4 to II.16.2
+    case "II.17": continue; // The PDF links II.21 to "i.10.6-custom-attributes" instead of "ii.21-custom-attribute"
     case "II.22.2": continue; // The PDF link to II.23.1.1 is broken
+    case "II.22.10": continue; // The PDF links II.21 to "i.10.6-custom-attributes" instead of "ii.21-custom-attribute"
     case "II.22.22": continue; // The PDF links 23.1.8 to II.23.1.7 but the content is at II.23.1.8... Also, the PDF link to II.23.1.7 is broken
     case "II.22.24": continue; // The PDF has two broken links to II.23.1.9
     case "II.22.26": continue; // Two problems: the link to II.15 is dead, but also the reference to II.23.1.10 should be to II.23.1.11 -- also mentioned in https://github.com/stakx/ecma-335/pull/22
     case "II.22.27": continue; // The PDF links to II.10.3.2 and II.15.4.1 are broken
     case "II.22.34": continue; // The PDF link to Partition I goes to C:/Users/...
+    case "II.22.37": continue; // The PDF links II.23.1.15 to II.23.1.3
     case "II.23.2": continue; // The link on II.23.2.6 instead goes to II.23.2.10 (twice)
     case "II.24.2.6": continue; // The PDF links to II.22 are all broken
     case "II.25.4": continue; // The PDF the link to II.22.26 is broken
+    case "II.25.4.5": continue; // The PDF links II.19 to "i.12.4.2-exception-handling.md" instead of "ii.19-exception-handling.md"
+    case "III.1.8.1.1": continue; // The PDF links III.1.8.1.2.2 to III.1.5, III.2.3 to III.1.5, and III.4.28 to III.4.30
+    case "III.3.45": continue; // The PDF links I.8.7.3 to I.8.7
+    case "III.1.8.1.2.1": continue; // The PDF links III.1.8 to III.1.5
+    case "III.4.2": continue; // The PDF links III.1.8 to III.1.5
+    case "III.4.15": continue; // The PDF links III.1.8 to III.1.5 (twice)
   }
 
 
@@ -323,20 +342,35 @@ for (const sect of allSections) {
     case "III.1.8.1.2.3": continue; // Partition III
   }
 
-  const pdfLinksAsMd = sect.links.map(resolveLink).map(findFileByHeading).join("\n");
+  const pdfLinksAsMd = sect.links.map(resolveLink).map(findFileByHeading);
 
   const headingFile = findFileByHeading(sect.text);
   const linksInFile = linksInMd(headingFile);
-  const mdLinks = linksInFile.join("\n");
+  const mdLinks = linksInFile;
 
   if (sect.links.length != linksInFile.length) {
     ++problemCount;
 
-    console.log(`${sect.links.length} links in PDF vs. ${linksInFile.length} links in ${headingFile}`);
+    console.warn(`${sect.links.length} links in PDF vs. ${linksInFile.length} links in ${headingFile}`);
     printDiff(pdfLinksAsMd, mdLinks);
-  } else {
-    // TODO fix links in file
+    continue;
   }
+
+  if (pdfLinksAsMd.join("\n") === mdLinks.join("\n")) {
+    // Section links are perfect!
+    continue;
+  }
+
+  const donePdfLinks = pdfLinksAsMd.filter((link, i) => !link.startsWith("#todo") && !mdLinks[i].startsWith("#todo"));
+  const doneMdLinks = mdLinks.filter((link, i) => !link.startsWith("#todo") && !pdfLinksAsMd[i].startsWith("#todo"));
+  if (donePdfLinks.join("\n") !== doneMdLinks.join("\n")) {
+    ++problemCount;
+    console.warn(`DONE links in ${headingFile} do not match PDF links for ${sect.text}`);
+    printDiff(pdfLinksAsMd, mdLinks);
+  }
+
+  // TODO fix the #todo- links in Markdown when the PDF isn't #todo-
+  continue;
 }
 
 console.log(problemCount, "problems found");

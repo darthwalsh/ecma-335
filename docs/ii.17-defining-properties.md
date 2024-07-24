@@ -16,7 +16,7 @@ The **.property** directive specifies a calling convention (§[II.15.3](ii.15.3-
 
 _[Rationale:_ There are currently no property names that are required to be marked with `rtspecialname`. It is provided for extensions, future standardization, and to increase consistency between the declaration of properties and methods (instance and type initializer methods shall be marked with this attribute). _end rationale]_
 
-While the CLI places no constraints on the methods that make up a property, the CLS (see [Partition I](#todo-missing-hyperlink)) specifies a set of consistency constraints. A property can contain any number of methods in its body. The following table shows how these methods are identified, and provides short descriptions of each kind of item:
+While the CLI places no constraints on the methods that make up a property, the CLS (see [Partition I](i.10-name-and-type-rules-for-the-common-language-specification.md)) specifies a set of consistency constraints. A property can contain any number of methods in its body. The following table shows how these methods are identified, and provides short descriptions of each kind of item:
 
  | _PropMember_ ::= | Description | Clause
  | ---- | ---- | ----

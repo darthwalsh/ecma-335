@@ -10,7 +10,7 @@
 
 #### Description:
 
-The `callvirt` instruction calls a late-bound method on an object. That is, the method is chosen based on the exact type of _obj_ rather than the compile-time class visible in the _method_ metadata token. `callvirt` can be used to call both virtual and instance methods. See [Partition I](#todo-missing-hyperlink) for a detailed description of the CIL calling sequence. The `callvirt` instruction can be immediately preceded by a `tail.` prefix to specify that the current stack frame should be released before transferring control. If the call would transfer control to a method of higher trust than the original method the stack frame will not be released.
+The `callvirt` instruction calls a late-bound method on an object. That is, the method is chosen based on the exact type of _obj_ rather than the compile-time class visible in the _method_ metadata token. `callvirt` can be used to call both virtual and instance methods. See [Partition I](i.12.3-machine-state.md) for a detailed description of the CIL calling sequence. The `callvirt` instruction can be immediately preceded by a `tail.` prefix to specify that the current stack frame should be released before transferring control. If the call would transfer control to a method of higher trust than the original method the stack frame will not be released.
 
 [A callee of "higher trust" is defined as one whose permission grant-set is a strict superset of the grant-set of the caller]
 
