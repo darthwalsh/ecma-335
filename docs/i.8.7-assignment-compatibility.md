@@ -2,7 +2,7 @@
 
 **Assignment compatibility** refers to the ability to store a value of type *T* (statically described by a type signature) into a location of type *U* (described by a location signature), and is sometimes abbreviated *U* := *T*. Because the type signature for *T* is described statically, the value might not actually be of the type described by the signature, but rather something compatible with that type. No location or value shall have type `System.Void`.
 
-The formal description of assignment compatibility is provided here, and is extended in [Partition III](#todo-missing-hyperlink), Verification type compatibility, with the *verifier-assignable-to* relation.
+The formal description of assignment compatibility is provided here, and is extended in [Partition III](iii.1.8.1.2.3-verification-type-compatibility.md), Verification type compatibility, with the *verifier-assignable-to* relation.
 
 There are different rules for determining the compatibility of types, depending upon the context in which they are evaluated. The following relations are defined in this section:
 
@@ -120,7 +120,7 @@ The *intermediate type* of a type _T_ is the following:
 
  3. Otherwise, the intermediate type is the verification type of `T`.
 
-_[Note:_ the *intermediate type* is similar to the *verification type* in stack state according to the table in [III.1.8.1.2.1](#todo-missing-hyperlink), differing only for floating-point types. The *intermediate type* of a type _T_ may have a different representation and meaning than _T_. _end note]_
+_[Note:_ the *intermediate type* is similar to the *verification type* in stack state according to the table in [III.1.8.1.2.1](iii.1.8.1.2.1-verification-types.md), differing only for floating-point types. The *intermediate type* of a type _T_ may have a different representation and meaning than _T_. _end note]_
 
 The *direct base class* of a type _T_ is the following:
 

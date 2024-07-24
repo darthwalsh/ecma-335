@@ -1,6 +1,6 @@
 ## III.1.8.1 Flow control restrictions for verifiable CIL
 
-This subclause specifies a verification algorithm that, combined with information on individual CIL instructions (see §[III.3](iii.3-base-instructions.md)) and metadata validation (see Partition II), guarantees memory integrity.
+This subclause specifies a verification algorithm that, combined with information on individual CIL instructions (see §[III.3](iii.3-base-instructions.md)) and metadata validation (see [Partition II](#todo-missing-hyperlink)), guarantees memory integrity.
 
 The algorithm specified here creates a minimum level for all compliant implementations of the CLI in the sense that any program that is considered verifiable by this algorithm shall be considered verifiable and run correctly on all compliant implementations of the CLI.
 

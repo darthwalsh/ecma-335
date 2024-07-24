@@ -1,0 +1,10 @@
+{
+  "name": "ecma-335-scripts",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "devDependencies": {
+    "pdfjs-dist": "^4.2.67"
+  }
+}

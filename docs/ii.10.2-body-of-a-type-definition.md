@@ -18,4 +18,4 @@ A type can contain any number of further declarations. The directives **.event**
  | \| _ExternSourceDecl_ | Source line information. | §[II.5.7](ii.5.7-source-line-information.md)
  | \| _SecurityDecl_ | Declarative security permissions. | §[II.20](ii.20-declarative-security.md)
 
-The top-to-bottom order of the **.method** definitions within a **.class** declaration (§[II.10](ii.10-defining-types.md)) is preserved in the _MethodDef_ table (§[22.26](#todo-missing-hyperlink)). This is required to support variance resolution in interface dispatch (§[12.2](#todo-missing-hyperlink)).
+The top-to-bottom order of the **.method** definitions within a **.class** declaration (§[II.10](ii.10-defining-types.md)) is preserved in the _MethodDef_ table (§[22.26](ii.22.26-methoddef-0x06.md)). This is required to support variance resolution in interface dispatch (§[12.2](ii.12.2-implementing-virtual-methods-on-interfaces.md)).

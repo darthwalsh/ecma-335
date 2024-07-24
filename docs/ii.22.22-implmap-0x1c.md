@@ -8,7 +8,7 @@ The CLI does not support this mechanism to access fields that are exported from 
 
 The _ImplMap_ table has the following columns:
 
- * _MappingFlags_ (a 2-byte bitmask of type _PInvokeAttributes_, §[23.1.8](#todo-missing-hyperlink))
+ * _MappingFlags_ (a 2-byte bitmask of type _PInvokeAttributes_, §[23.1.8](ii.23.1.8-flags-for-implmap-pinvokeattributes.md))
 
  * _MemberForwarded_ (an index into the _Field_ or _MethodDef_ table; more precisely, a _MemberForwarded_  (§[II.24.2.6](ii.24.2.6-metadata-stream.md)) coded index). However, it only ever indexes the _MethodDef_ table, since _Field_ export is not supported.
 

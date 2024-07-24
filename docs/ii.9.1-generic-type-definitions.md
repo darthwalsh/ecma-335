@@ -30,4 +30,4 @@ Generic type definitions are subject to the following restrictions:
 
      * The graph is valid if it contains no cycles.
 
-   _[Note:_ This algorithm is a natural generalization of the rules for non-generic types. See [Partition I, §8.9.9](#todo-missing-hyperlink) _end note]_
+   _[Note:_ This algorithm is a natural generalization of the rules for non-generic types. See [Partition I, §8.9.9](i.8.9.9-object-type-inheritance.md) _end note]_

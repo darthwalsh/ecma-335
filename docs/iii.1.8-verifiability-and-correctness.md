@@ -1,6 +1,6 @@
 ## III.1.8 Verifiability and correctness
 
-Memory safety is a property that ensures programs running in the same address space are correctly isolated from one another (see [Partition I](#todo-missing-hyperlink)). Thus, it is desirable to test whether programs are memory safe prior to running them. Unfortunately, it is provably impossible to do this with 100% accuracy. Instead, the CLI can test a stronger restriction, called *verifiability*. Every program that is verified is memory safe, but some programs that are not verifiable are still memory safe.
+Memory safety is a property that ensures programs running in the same address space are correctly isolated from one another (see [Partition I](i.12.6-memory-model-and-optimizations.md)). Thus, it is desirable to test whether programs are memory safe prior to running them. Unfortunately, it is provably impossible to do this with 100% accuracy. Instead, the CLI can test a stronger restriction, called *verifiability*. Every program that is verified is memory safe, but some programs that are not verifiable are still memory safe.
 
 Correct CIL is CIL that executes on all conforming implementations of the CLI, with welldefined behavior as specified in this standard. However, correct CIL need not result in identical behavior across conforming implementations; that is, the behavior might be implementation-specific.
 

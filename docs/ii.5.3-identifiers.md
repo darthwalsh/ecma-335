@@ -1,13 +1,13 @@
 ## II.5.3 Identifiers
 
-Identifiers are used to name entities. Simple identifiers are equivalent to an _ID_. However, the ILAsm syntax allows the use of any identifier that can be formed using the Unicode character set (see [Partition I](#todo-missing-hyperlink)). To achieve this, an identifier shall be placed within single quotation marks. This is summarized in the following grammar.
+Identifiers are used to name entities. Simple identifiers are equivalent to an _ID_. However, the ILAsm syntax allows the use of any identifier that can be formed using the Unicode character set (see [Partition I](i.3-normative-references.md)). To achieve this, an identifier shall be placed within single quotation marks. This is summarized in the following grammar.
 
  | _Id_ ::=
  |:----
  | _ID_
  | \| _SQSTRING_
 
-A keyword shall only be used as an identifier if that keyword appears in single quotes (see [Partition VI](#todo-missing-hyperlink) for a list of all keywords). Several *Id*s can be combined to form a larger _Id_, by separating adjacent pairs with a dot (`.`). An _Id_ formed in this way is called a _DottedName_.
+A keyword shall only be used as an identifier if that keyword appears in single quotes (see [Partition VI](vi.c-cil-assembler-implementation.md) for a list of all keywords). Several *Id*s can be combined to form a larger _Id_, by separating adjacent pairs with a dot (`.`). An _Id_ formed in this way is called a _DottedName_.
 
  | _DottedName_ ::=
  |:----
